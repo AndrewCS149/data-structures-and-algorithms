@@ -69,30 +69,6 @@ const createList = (availableItems) => {
   return groceryList;
 };
 
-// describe('Testing challenge 3', () => {
-//   const inventory = [{
-//     name: 'apples',
-//     available: true
-//   }, {
-//     name: 'pears',
-//     available: true
-//   }, {
-//     name: 'oranges',
-//     available: false
-//   }, {
-//     name: 'bananas',
-//     available: true
-//   }, {
-//     name: 'blueberries',
-//     available: false
-//   }];
-
-//   test('It should only add the available items to the list', () => {
-//     expect(createList(inventory)).toStrictEqual(['apples', 'pears', 'bananas']);
-//     expect(createList(inventory).length).toStrictEqual(3);
-//   });
-// });
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -108,7 +84,23 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+
+  let newArr = [];
+
+  arr.forEach((num) => {
+
+    if (num % 3 === 0 && num % 5 === 0) {
+      newArr.push('Fizz Buzz');
+    } else if (num % 3 === 0) {
+      newArr.push('Fizz');
+    } else if (num % 5 === 0) {
+      newArr.push('Buzz');
+    } else {
+      newArr.push(num);
+    }
+  });
+
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
