@@ -39,13 +39,6 @@ const addNumbers = (num, arr, times, callback) => {
   return arr;
 };
 
-// describe('Testing challenge 2', () => {
-//   test('It should add the number 8 to the array five times', () => {
-//     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
-//     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
-//   });
-// });
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -64,8 +57,41 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+
+  let groceryList = [];
+
+  availableItems.forEach((item) => {
+    if (item.available === true) {
+      groceryList.push(item.name);
+    }
+  });
+
+  return groceryList;
 };
+
+// describe('Testing challenge 3', () => {
+//   const inventory = [{
+//     name: 'apples',
+//     available: true
+//   }, {
+//     name: 'pears',
+//     available: true
+//   }, {
+//     name: 'oranges',
+//     available: false
+//   }, {
+//     name: 'bananas',
+//     available: true
+//   }, {
+//     name: 'blueberries',
+//     available: false
+//   }];
+
+//   test('It should only add the available items to the list', () => {
+//     expect(createList(inventory)).toStrictEqual(['apples', 'pears', 'bananas']);
+//     expect(createList(inventory).length).toStrictEqual(3);
+//   });
+// });
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
