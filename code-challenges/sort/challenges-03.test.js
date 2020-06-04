@@ -181,7 +181,19 @@ const meetings = [
 ];
 
 const sortMeetingsByDay = (arr) => {
-  // Solution code here...
+
+  let sorter = {
+    'Monday': 0,
+    'Tuesday': 1,
+    'Wednesday': 2,
+    'Friday': 3
+  };
+
+  return arr.sort((a, b) => {
+
+    return sorter[a.dayOfWeek] - sorter[b.dayOfWeek];
+
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
