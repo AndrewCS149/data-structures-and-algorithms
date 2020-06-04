@@ -144,7 +144,18 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 const sortPeopleBetter = (arr) => {
-  // Solution code here...
+
+  return arr.sort((a, b) => {
+
+    if (a.lastName === b.lastName &&
+      a.firstName === b.firstName) {
+      return a.age < b.age ? -1 : 1;
+    } else if (a.lastName === b.lastName) {
+      return a.firstName < b.firstName ? -1 : 1;
+    } else {
+      return a.lastName < b.lastName ? -1 : 1;
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -330,7 +341,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should sort people with more strict ordering', () => {
     const family = [
       new Person('Casey', 'Codefellows', 55),
@@ -363,7 +374,7 @@ xdescribe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort meetings by the day on which they happen', () => {
     const sortedMeetings = sortMeetingsByDay(meetings);
     expect(sortedMeetings.slice(0, 2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
