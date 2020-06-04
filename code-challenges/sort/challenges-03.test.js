@@ -242,9 +242,8 @@ $ = createSnippetWithJQuery(`
 </ul>
 `);
 
-const addPearClass = () => {
-  // Solution code here...
-}
+const addPearClass = () => $('li:last-child').addClass('pear');
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -428,7 +427,7 @@ describe('Testing challenge 11', () => {
   });
 });
 
-xdescribe('Testing challenge 12', () => {
+describe('Testing challenge 12', () => {
   test('It should add a class of pear to the thrid li', () => {
     addPearClass();
     expect($('li:nth-child(3)').hasClass('pear')).toBe(true);
