@@ -63,17 +63,10 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-
   return arr.sort((a, b) => {
     a = a.toLowerCase()
     b = b.toLowerCase()
-    if (a > b) {
-      return 1;
-    } else if (a < b) {
-      return -1;
-    } else {
-      return 0;
-    }
+    return a < b ? -1 : 1;
   })
 };
 
@@ -105,7 +98,14 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
-  // Solution code here...
+
+  return arr.sort((a, b) => {
+
+    a = a.toString();
+    b = b.toString();
+
+    return a.length < b.length ? -1 : 1;
+  })
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -299,7 +299,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should sort numbers by their length', () => {
     expect(sortNumbersByLength([10, 2.8, 1, -47.75])).toStrictEqual([1, 10, 2.8, -47.75]);
     expect(sortNumbersByLength([100, 2.82, 1, -47.75])).toStrictEqual([1, 100, 2.82, -47.75]);
