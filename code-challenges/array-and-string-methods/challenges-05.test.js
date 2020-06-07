@@ -38,22 +38,15 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
 
-  // starWarsPeople.forEach(val => {
-  //   let section = $.html('#template');
-  //   let main = $.html('main');
-  //   section.append(`<h2>${val.name}</h2>`);
-  //   section.append(`<h3>${val.height}</h3>`);
-  //   section.append(`<p>${val.eye_color}</p>`);
+  starWarsPeople.forEach(val => {
+    let section = $('<section></section');
 
-  //   section.html()
+    section.append(`<h2>${val.name}</h2>`);
+    section.append(`<h3>${val.height}</h3>`);
+    section.append(`<p>${val.eye_color}<p>`);
 
-  //   main.append(section);
-
-  //   let section = $.find('#template');
-  //   section.append()
-  // });
-
-  // $('document').append($);
+    $('main').append(section);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -266,7 +259,7 @@ Run your tests from the console: jest challenges-05.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should append the star wars people to the DOM', () => {
     templateWithJQuery();
     expect($('section:nth-child(2) h2').text()).toStrictEqual('Luke Skywalker');
