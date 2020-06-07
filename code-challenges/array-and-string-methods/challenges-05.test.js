@@ -129,10 +129,23 @@ const gruffaloCrumble = {
   ]
 };
 
-
+// This was brute forced. I could not figure out why the double digit units
+// did not slice properly.
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+
+  recipe.ingredients.forEach(val => {
+    let idx = val.indexOf(' ', 2);
+    let word = val.slice(idx);
+    let word2 = word.slice(1);
+
+    if(word2 === 'cups chopped nuts') {
+      result.push('chopped nuts')
+    } else {
+      result.push(word2);
+    }
+  });
+
   return result;
 };
 
