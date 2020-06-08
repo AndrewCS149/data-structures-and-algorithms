@@ -41,9 +41,9 @@ const templateWithJQuery = () => {
   starWarsPeople.forEach(val => {
     let section = $('<section></section');
 
-    section.append(`<h2>${val.name}</h2>`);
-    section.append(`<h3>${val.height}</h3>`);
-    section.append(`<p>${val.eye_color}<p>`);
+    section.append(`<h2>${val.name}</h2>
+                    <h3>${val.height}</h3>
+                    <p>${val.eye_color}</p>`);
 
     $('main').append(section);
   });
@@ -145,14 +145,19 @@ const listFoods = (recipe) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
-Write a function named splitFoods that uses split to produce the same output as Challenge 3.
+Write a function named splitFoods that uses split to produce the same output as Challenge 4.
 
 You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+
+  recipe.ingredients.forEach(val => {
+    let arr = val.split(' ');
+    let arr2 = arr.slice(2);
+    result.push(arr2.join(' '));
+  })
   return result;
 };
 
@@ -293,7 +298,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return a list of foods', () => {
     expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
   });
