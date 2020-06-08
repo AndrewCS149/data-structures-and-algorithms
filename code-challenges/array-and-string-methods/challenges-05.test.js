@@ -196,7 +196,15 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+
+  arr.forEach((num, idx) => {
+
+    if (num % 2 === 0 && arr[idx+1] % 2 === 0) {
+      arr.splice(idx, 2);
+    } else if (num % 2 === 0) {
+      arr.splice(idx, 1);
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -316,7 +324,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should remove the even numbers from the array', () => {
     let list = [1, 2, 3, 4, 5, 6];
     removeEvenValues(list);
