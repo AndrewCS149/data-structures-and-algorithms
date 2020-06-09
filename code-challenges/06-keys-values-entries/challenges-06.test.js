@@ -13,8 +13,7 @@ Use the characters data below for all of the challenges except challenge 2.
 Write a function named templatingWithMustache that uses mustache to create the markup templates for each of the characters. Use the snippet as your guide for creating your templates. Return an array of template strings. Note: this function does not need to actually append the markup to the DOM.
 
 ------------------------------------------------------------------------------------------------ */
-let characters = [
-  {
+let characters = [{
     name: 'Eddard',
     spouse: 'Catelyn',
     children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
@@ -68,9 +67,26 @@ let $ = createSnippetWithJQuery(`
 `)
 
 const templatingWithMustache = () => {
-  // Solution code here...
-}
 
+  let arr = [];
+
+  characters.forEach(val => {
+    let template = `
+    <h2> {{ name }} </h2>
+    <h3> {{ spouse }} </h3>
+    {{#children}}
+    * {{.}}
+    {{/children}}
+    <p> {{ house }} </p>
+  `;
+    let toHtml = Mustache.render(template, val);
+    arr.push(toHtml)
+  })
+
+  return arr;
+
+};
+// console.log(templatingWithMustache(characters));
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -78,7 +94,12 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301',
+  duration: {
+    dayTrack: '4 weeks',
+    eveningTrack: '8 weeks'
+  },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
@@ -202,13 +223,13 @@ describe('Testing challenge 1', () => {
     * Rickon
     <p> Stark </p>
   `,
-    `
+      `
     <h2> Jon A. </h2>
     <h3> Lysa </h3>
     * Robin
     <p> Arryn </p>
   `,
-    `
+      `
     <h2> Cersei </h2>
     <h3> Robert </h3>
     * Joffrey
@@ -216,7 +237,7 @@ describe('Testing challenge 1', () => {
     * Tommen
     <p> Lannister </p>
   `,
-    `
+      `
     <h2> Daenarys </h2>
     <h3> Khal Drogo </h3>
     * Drogon
@@ -224,23 +245,24 @@ describe('Testing challenge 1', () => {
     * Viserion
     <p> Targaryen </p>
   `,
-    `
+      `
     <h2> Mace </h2>
     <h3> Alerie </h3>
     * Margaery
     * Loras
     <p> Tyrell </p>
   `,
-    `
+      `
     <h2> Euron </h2>
     <h3>  </h3>
     <p> Greyjoy </p>
   `,
-    `
+      `
     <h2> Jon S. </h2>
     <h3>  </h3>
     <p> Snow </p>
-  `])
+  `
+    ])
   })
 });
 
@@ -285,17 +307,59 @@ describe('Testing challenge 6', () => {
 
 describe('Testing challenge 7', () => {
   test('It should return an object for each house containing the name and size', () => {
-    expect(houseSize(characters)).toStrictEqual([{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, { house: 'Lannister', members: 5 }, { house: 'Targaryen', members: 5 }, { house: 'Tyrell', members: 4 }, { house: 'Greyjoy', members: 1 }, { house: 'Snow', members: 1 }]);
+    expect(houseSize(characters)).toStrictEqual([{
+      house: 'Stark',
+      members: 7
+    }, {
+      house: 'Arryn',
+      members: 3
+    }, {
+      house: 'Lannister',
+      members: 5
+    }, {
+      house: 'Targaryen',
+      members: 5
+    }, {
+      house: 'Tyrell',
+      members: 4
+    }, {
+      house: 'Greyjoy',
+      members: 1
+    }, {
+      house: 'Snow',
+      members: 1
+    }]);
     expect(houseSize(characters).length).toStrictEqual(7);
   });
 });
 
 describe('Testing challenge 8', () => {
   test('It should not include any deceased spouses', () => {
-    expect(houseSurvivors(characters)).toStrictEqual([{ house: 'Stark', members: 6 }, { house: 'Arryn', members: 2 }, { house: 'Lannister', members: 4 }, { house: 'Targaryen', members: 4 }, { house: 'Tyrell', members: 3 }, { house: 'Greyjoy', members: 1 }, { house: 'Snow', members: 1 }]);
+    expect(houseSurvivors(characters)).toStrictEqual([{
+      house: 'Stark',
+      members: 6
+    }, {
+      house: 'Arryn',
+      members: 2
+    }, {
+      house: 'Lannister',
+      members: 4
+    }, {
+      house: 'Targaryen',
+      members: 4
+    }, {
+      house: 'Tyrell',
+      members: 3
+    }, {
+      house: 'Greyjoy',
+      members: 1
+    }, {
+      house: 'Snow',
+      members: 1
+    }]);
   });
 });
 
-function createSnippetWithJQuery(html){
+function createSnippetWithJQuery(html) {
   return cheerio.load(html);
 }
