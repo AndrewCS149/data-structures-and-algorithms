@@ -31,9 +31,11 @@ You may choose to complete this challenge using a for loop, for...in syntax, or 
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
 
-const forLoopTwoToThe = (arr) => {
-  // Solution code here...
-};
+const forLoopTwoToThe = arr => {
+  let newArr = [];
+  arr.forEach(num => newArr.push(Math.pow(2, num)));
+  return newArr;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
