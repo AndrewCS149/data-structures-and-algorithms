@@ -36,8 +36,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-
-  const oddNums = arr.filter(num => num % 2 === 1);
+  let oddNums = arr.filter(num => num % 2 === 1);
   return oddNums;
 };
 
@@ -53,9 +52,9 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+  const newArr = arr.filter(str => str.match(/[aeiou]/g));
+  return newArr;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -66,7 +65,12 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  let newArr = arr.filter((num) => {
+    if (!forbiddenValues.includes(num)) {
+      return num;
+    }
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
