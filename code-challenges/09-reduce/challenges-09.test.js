@@ -159,16 +159,10 @@ const currentEvents = {
   ]
 }
 
-// Then, write an `/events` route with a callback function called getCurrentEvents.
-
-// Next, write a function named getCurrentEvents that takes in the request and response as parameters. This function should call the mapCurrentEvents function and send the result to the front-end.
 function getCurrentEvents(request, response){
-
   response.send(mapCurrentEvents());
-
 }
 
-// First, write a function called mapCurrentEvents that maps over the current events object, runs it through a constructor function and returns the resulting array.
 const mapCurrentEvents = () => {
   let eventsArr = currentEvents.news.map(val => {
     return new Event(val);
@@ -176,14 +170,7 @@ const mapCurrentEvents = () => {
   console.log(currentEvents.news[0].category[0]);
   return eventsArr;
 }
-// console.log(currentEvents.news[0]);
-// The constructor function should be a stand alone function named Events and should have the following keys:
-// * author
-// * categories
-// * summary
-// * img_url
-// * date
-// * title
+
 function Event(obj){
   this.author = obj.author;
   this.categories = obj.category;
@@ -202,7 +189,12 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+  let count = arr.reduce(accumulator => {
+    accumulator++;
+    return accumulator
+  }, 0);
+
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
