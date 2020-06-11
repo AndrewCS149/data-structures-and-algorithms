@@ -167,7 +167,6 @@ const mapCurrentEvents = () => {
   let eventsArr = currentEvents.news.map(val => {
     return new Event(val);
   });
-  console.log(currentEvents.news[0].category[0]);
   return eventsArr;
 }
 
@@ -193,7 +192,6 @@ const countNumberOfElements = (arr) => {
     accumulator++;
     return accumulator
   }, 0);
-
   return count;
 };
 
@@ -254,7 +252,11 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  let namesArr = arr.reduce((names, obj) => {
+    names.push(obj.name)
+    return names;
+  }, []);
+  return namesArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -266,7 +268,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+
+  str = str.split('');
+  let reverseStr = str.reduce((reverse, char) => {
+    return char + reverse;
+  }, '');
+  return reverseStr;
 };
 
 /* ------------------------------------------------------------------------------------------------
