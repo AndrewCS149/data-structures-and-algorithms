@@ -22,9 +22,7 @@ const createServer = () => {
 
 
 function sayHello(request, response) {
-
-  // console.log('Hello from the back-end');
-
+  response.send('Hello from the back-end');
 }
 
 /* ------------------------------------------------------------------------------------------------
