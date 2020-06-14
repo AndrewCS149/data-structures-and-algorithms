@@ -168,9 +168,19 @@ CHALLENGE 6 - Stretch Goal
 Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
 ------------------------------------------------------------------------------------------------ */
 
-const totalCharacters = (arr) => {
-  // Solution code here...
-};
+const totalCharacters = arr => {
+
+  let total = arr.reduce((count, val) => {
+
+    if (val.name) count++;
+    if (val.spouse) count++;
+    if (val.children) count += val.children.length;
+
+    return count;
+  }, 0)
+
+  return total;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -184,7 +194,23 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = (arr) => {
   const sizes = [];
-  // Solution code here...
+
+  arr.forEach(val => {
+
+    let total = 0;
+
+    if(val.name) total++;
+    if(val.spouse) total++;
+    if(val.children) total += val.children.length;
+
+    let size = {
+      'house' : val.house,
+      'members' : total
+    };
+
+    sizes.push(size);
+  });
+
   return sizes;
 };
 
