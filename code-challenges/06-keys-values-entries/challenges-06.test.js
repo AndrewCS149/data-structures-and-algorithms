@@ -14,47 +14,47 @@ Write a function named templatingWithMustache that uses mustache to create the m
 
 ------------------------------------------------------------------------------------------------ */
 let characters = [{
-    name: 'Eddard',
-    spouse: 'Catelyn',
-    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-    house: 'Stark'
-  },
-  {
-    name: 'Jon A.',
-    spouse: 'Lysa',
-    children: ['Robin'],
-    house: 'Arryn'
-  },
-  {
-    name: 'Cersei',
-    spouse: 'Robert',
-    children: ['Joffrey', 'Myrcella', 'Tommen'],
-    house: 'Lannister'
-  },
-  {
-    name: 'Daenarys',
-    spouse: 'Khal Drogo',
-    children: ['Drogon', 'Rhaegal', 'Viserion'],
-    house: 'Targaryen'
-  },
-  {
-    name: 'Mace',
-    spouse: 'Alerie',
-    children: ['Margaery', 'Loras'],
-    house: 'Tyrell'
-  },
-  {
-    name: 'Euron',
-    spouse: null,
-    children: [],
-    house: 'Greyjoy'
-  },
-  {
-    name: 'Jon S.',
-    spouse: null,
-    children: [],
-    house: 'Snow'
-  }
+  name: 'Eddard',
+  spouse: 'Catelyn',
+  children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+  house: 'Stark'
+},
+{
+  name: 'Jon A.',
+  spouse: 'Lysa',
+  children: ['Robin'],
+  house: 'Arryn'
+},
+{
+  name: 'Cersei',
+  spouse: 'Robert',
+  children: ['Joffrey', 'Myrcella', 'Tommen'],
+  house: 'Lannister'
+},
+{
+  name: 'Daenarys',
+  spouse: 'Khal Drogo',
+  children: ['Drogon', 'Rhaegal', 'Viserion'],
+  house: 'Targaryen'
+},
+{
+  name: 'Mace',
+  spouse: 'Alerie',
+  children: ['Margaery', 'Loras'],
+  house: 'Tyrell'
+},
+{
+  name: 'Euron',
+  spouse: null,
+  children: [],
+  house: 'Greyjoy'
+},
+{
+  name: 'Jon S.',
+  spouse: null,
+  children: [],
+  house: 'Snow'
+}
 ];
 
 let $ = createSnippetWithJQuery(`
@@ -153,7 +153,13 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+
+  let hasChild = false;
+  arr.forEach(val => {
+    if(val.name === character)
+      if(val.children.length > 0) hasChild = true;
+  })
+  return hasChild;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -230,13 +236,13 @@ describe('Testing challenge 1', () => {
     * Rickon
     <p> Stark </p>
   `,
-      `
+    `
     <h2> Jon A. </h2>
     <h3> Lysa </h3>
     * Robin
     <p> Arryn </p>
   `,
-      `
+    `
     <h2> Cersei </h2>
     <h3> Robert </h3>
     * Joffrey
@@ -244,7 +250,7 @@ describe('Testing challenge 1', () => {
     * Tommen
     <p> Lannister </p>
   `,
-      `
+    `
     <h2> Daenarys </h2>
     <h3> Khal Drogo </h3>
     * Drogon
@@ -252,19 +258,19 @@ describe('Testing challenge 1', () => {
     * Viserion
     <p> Targaryen </p>
   `,
-      `
+    `
     <h2> Mace </h2>
     <h3> Alerie </h3>
     * Margaery
     * Loras
     <p> Tyrell </p>
   `,
-      `
+    `
     <h2> Euron </h2>
     <h3>  </h3>
     <p> Greyjoy </p>
   `,
-      `
+    `
     <h2> Jon S. </h2>
     <h3>  </h3>
     <p> Snow </p>
