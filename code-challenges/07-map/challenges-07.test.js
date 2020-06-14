@@ -69,10 +69,12 @@ Read the MDN documentation on String.charCodeAt() if necessary.
 For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
-const charCode = (arr) => {
+const charCode = arr => {
 
-
-
+  let newArr = arr.map(val => {
+    return val.charCodeAt();
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,29 +104,29 @@ extractAbilities(snorlaxAbilities.abilities)
 
 const snorlaxAbilities = {
   abilities: [{
-      slot: 3,
-      is_hidden: true,
-      ability: {
-        url: 'https://pokeapi.co/api/v2/ability/82/',
-        name: 'gluttony',
-      },
+    slot: 3,
+    is_hidden: true,
+    ability: {
+      url: 'https://pokeapi.co/api/v2/ability/82/',
+      name: 'gluttony',
     },
-    {
-      slot: 2,
-      is_hidden: false,
-      ability: {
-        url: 'https://pokeapi.co/api/v2/ability/56/',
-        name: 'cute charm',
-      },
+  },
+  {
+    slot: 2,
+    is_hidden: false,
+    ability: {
+      url: 'https://pokeapi.co/api/v2/ability/56/',
+      name: 'cute charm',
     },
-    {
-      slot: 1,
-      is_hidden: false,
-      ability: {
-        url: 'https://pokeapi.co/api/v2/ability/17/',
-        name: 'immunity',
-      },
+  },
+  {
+    slot: 1,
+    is_hidden: false,
+    ability: {
+      url: 'https://pokeapi.co/api/v2/ability/17/',
+      name: 'immunity',
     },
+  },
   ],
   name: 'snorlax',
   weight: 4600,
@@ -148,29 +150,29 @@ Here is an example of a single array element: { name: 'speed', total: 35 }
 
 const snorlaxStats = {
   stats: [{
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/6/',
-        name: 'speed',
-      },
-      effort: 5,
-      baseStat: 30,
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/6/',
+      name: 'speed',
     },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/5/',
-        name: 'special-defense',
-      },
-      effort: 2,
-      baseStat: 110,
+    effort: 5,
+    baseStat: 30,
+  },
+  {
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/5/',
+      name: 'special-defense',
     },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/4/',
-        name: 'special-attack',
-      },
-      effort: 9,
-      baseStat: 65,
+    effort: 2,
+    baseStat: 110,
+  },
+  {
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/4/',
+      name: 'special-attack',
     },
+    effort: 9,
+    baseStat: 65,
+  },
   ],
   name: 'snorlax',
   weight: 4600,
@@ -270,17 +272,17 @@ describe('Testing challenge 7', () => {
 describe('Testing challenge 8', () => {
   test('It should return an array containing objects with name and total values', () => {
     expect(extractStats(snorlaxStats.stats)).toStrictEqual([{
-        name: 'speed',
-        total: 35,
-      },
-      {
-        name: 'special-defense',
-        total: 112,
-      },
-      {
-        name: 'special-attack',
-        total: 74,
-      },
+      name: 'speed',
+      total: 35,
+    },
+    {
+      name: 'special-defense',
+      total: 112,
+    },
+    {
+      name: 'special-attack',
+      total: 74,
+    },
     ]);
     expect(extractStats(snorlaxStats.stats).length).toStrictEqual(3);
   });
