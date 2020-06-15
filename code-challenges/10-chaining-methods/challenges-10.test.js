@@ -22,7 +22,7 @@ const createServer = () => {
     res.status(200).send(['bacon', 'ice-cream', 'waffles']);
   });
 
-  app.get('/*', (req, res) => {
+  app.get('*', (req, res) => {
     res.status(404).send('Not a route.');
   })
 
@@ -44,7 +44,17 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+  let count = 0;
+
+  count = input.reduce((counter, idx) => {
+    let count2 = idx.reduce((counter2, idx2) => {
+      if(idx2 === target) counter2++;
+      return counter2;
+    }, 0);
+    counter += count2;
+    return counter;
+  }, 0);
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
