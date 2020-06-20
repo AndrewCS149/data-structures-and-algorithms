@@ -436,10 +436,28 @@ Write a function named extractChildren that, given the array of characters from 
 
 2) Then, uses reduce to return an array of all the children's names in the filtered array
 ------------------------------------------------------------------------------------------------ */
-
+//  UGLYYYY
 const extractChildren = (arr) => {
-  // Solution code here...
+
+  let charsWithA = arr.filter(char => {
+    if (char.name.toLowerCase().includes('a')) {
+      return char;
+    }
+  }, 0);
+
+  let test = [];
+  charsWithA.reduce((count, val) => {
+    let allKinder = []
+    if (val.children) {
+      allKinder.push(val.children);
+    }
+    test = test.concat(allKinder[0])
+    return allKinder[0];
+  }, 0);
+  test.pop();
+  return test;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
