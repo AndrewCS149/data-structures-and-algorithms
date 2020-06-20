@@ -405,7 +405,15 @@ const snorlaxData = {
 };
 
 const extractStat = (statName, arr) => {
-  // Solution code here...
+
+  let isTrue;
+  let isFalse = arr.reduce((not, val) => {
+
+    if (val.stat.name === statName) isTrue = val;
+    else return not;
+  }, null);
+
+  return isTrue ? isTrue : isFalse;
 };
 
 /* ------------------------------------------------------------------------------------------------
