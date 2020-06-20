@@ -14,47 +14,47 @@ Write a function named templatingWithMustache that uses mustache to create the m
 
 ------------------------------------------------------------------------------------------------ */
 let characters = [{
-    name: 'Eddard',
-    spouse: 'Catelyn',
-    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-    house: 'Stark'
-  },
-  {
-    name: 'Jon A.',
-    spouse: 'Lysa',
-    children: ['Robin'],
-    house: 'Arryn'
-  },
-  {
-    name: 'Cersei',
-    spouse: 'Robert',
-    children: ['Joffrey', 'Myrcella', 'Tommen'],
-    house: 'Lannister'
-  },
-  {
-    name: 'Daenarys',
-    spouse: 'Khal Drogo',
-    children: ['Drogon', 'Rhaegal', 'Viserion'],
-    house: 'Targaryen'
-  },
-  {
-    name: 'Mace',
-    spouse: 'Alerie',
-    children: ['Margaery', 'Loras'],
-    house: 'Tyrell'
-  },
-  {
-    name: 'Euron',
-    spouse: null,
-    children: [],
-    house: 'Greyjoy'
-  },
-  {
-    name: 'Jon S.',
-    spouse: null,
-    children: [],
-    house: 'Snow'
-  }
+  name: 'Eddard',
+  spouse: 'Catelyn',
+  children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+  house: 'Stark'
+},
+{
+  name: 'Jon A.',
+  spouse: 'Lysa',
+  children: ['Robin'],
+  house: 'Arryn'
+},
+{
+  name: 'Cersei',
+  spouse: 'Robert',
+  children: ['Joffrey', 'Myrcella', 'Tommen'],
+  house: 'Lannister'
+},
+{
+  name: 'Daenarys',
+  spouse: 'Khal Drogo',
+  children: ['Drogon', 'Rhaegal', 'Viserion'],
+  house: 'Targaryen'
+},
+{
+  name: 'Mace',
+  spouse: 'Alerie',
+  children: ['Margaery', 'Loras'],
+  house: 'Tyrell'
+},
+{
+  name: 'Euron',
+  spouse: null,
+  children: [],
+  house: 'Greyjoy'
+},
+{
+  name: 'Jon S.',
+  spouse: null,
+  children: [],
+  house: 'Snow'
+}
 ];
 
 let $ = createSnippetWithJQuery(`
@@ -153,7 +153,13 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+
+  let hasChild = false;
+  arr.forEach(val => {
+    if(val.name === character)
+      if(val.children.length > 0) hasChild = true;
+  })
+  return hasChild;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -162,9 +168,19 @@ CHALLENGE 6 - Stretch Goal
 Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
 ------------------------------------------------------------------------------------------------ */
 
-const totalCharacters = (arr) => {
-  // Solution code here...
-};
+const totalCharacters = arr => {
+
+  let total = arr.reduce((count, val) => {
+
+    if (val.name) count++;
+    if (val.spouse) count++;
+    if (val.children) count += val.children.length;
+
+    return count;
+  }, 0)
+
+  return total;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -178,7 +194,23 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = (arr) => {
   const sizes = [];
-  // Solution code here...
+
+  arr.forEach(val => {
+
+    let total = 0;
+
+    if(val.name) total++;
+    if(val.spouse) total++;
+    if(val.children) total += val.children.length;
+
+    let size = {
+      'house' : val.house,
+      'members' : total
+    };
+
+    sizes.push(size);
+  });
+
   return sizes;
 };
 
@@ -202,7 +234,25 @@ const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
 
 const houseSurvivors = (arr) => {
   const survivors = [];
-  // Solution code here...
+
+  arr.forEach(val => {
+
+    let total = 0;
+
+    if (val.name) total++;
+    if (val.spouse) total++;
+    if (val.children) total += val.children.length;
+    if (deceasedSpouses.includes(val.spouse)) total--;
+
+    let size = {
+      'house' : val.house,
+      'members' : total
+    };
+
+    survivors.push(size);
+
+  });
+
   return survivors;
 };
 
@@ -230,13 +280,13 @@ describe('Testing challenge 1', () => {
     * Rickon
     <p> Stark </p>
   `,
-      `
+    `
     <h2> Jon A. </h2>
     <h3> Lysa </h3>
     * Robin
     <p> Arryn </p>
   `,
-      `
+    `
     <h2> Cersei </h2>
     <h3> Robert </h3>
     * Joffrey
@@ -244,7 +294,7 @@ describe('Testing challenge 1', () => {
     * Tommen
     <p> Lannister </p>
   `,
-      `
+    `
     <h2> Daenarys </h2>
     <h3> Khal Drogo </h3>
     * Drogon
@@ -252,19 +302,19 @@ describe('Testing challenge 1', () => {
     * Viserion
     <p> Targaryen </p>
   `,
-      `
+    `
     <h2> Mace </h2>
     <h3> Alerie </h3>
     * Margaery
     * Loras
     <p> Tyrell </p>
   `,
-      `
+    `
     <h2> Euron </h2>
     <h3>  </h3>
     <p> Greyjoy </p>
   `,
-      `
+    `
     <h2> Jon S. </h2>
     <h3>  </h3>
     <p> Snow </p>
