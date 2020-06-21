@@ -88,7 +88,12 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
+
+  return arr.map(val => {
+    if(val % 2 === 0) return 'even';
+    else if (val % 2 === 1) return 'odd';
+    else return 'N/A';
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -132,9 +137,7 @@ const snorlaxAbilities = {
   weight: 4600,
 };
 
-const extractAbilities = (arr) => {
-  // Solution code here...
-};
+const extractAbilities = (arr) => arr.map(val => val.ability.name);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -179,7 +182,9 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
-  // Solution code here...
+  return arr.map(val => {
+    return {name: val.stat.name, total: val.effort + val.baseStat}
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
