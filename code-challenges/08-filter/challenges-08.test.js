@@ -81,37 +81,36 @@ For example, getBaseStatGreaterThan(snorlaxData.stats, 50) will return an array 
 
 const snorlaxData = {
   stats: [{
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/6/',
-        name: 'speed',
-      },
-      effort: 5,
-      baseStat: 30,
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/6/',
+      name: 'speed',
     },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/5/',
-        name: 'special-defense',
-      },
-      effort: 2,
-      baseStat: 110,
+    effort: 5,
+    baseStat: 30,
+  },
+  {
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/5/',
+      name: 'special-defense',
     },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/4/',
-        name: 'special-attack',
-      },
-      effort: 9,
-      baseStat: 65,
+    effort: 2,
+    baseStat: 110,
+  },
+  {
+    stat: {
+      url: 'https://pokeapi.co/api/v2/stat/4/',
+      name: 'special-attack',
     },
+    effort: 9,
+    baseStat: 65,
+  },
   ],
   name: 'snorlax',
   weight: 4600,
 };
 
-const getBaseStatGreaterThan = (arr, minBaseStat) => {
-  // Solution code here...
-};
+const getBaseStatGreaterThan = (arr, minBaseStat) => arr.filter(val => val.baseStat > minBaseStat);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
@@ -132,45 +131,45 @@ Write a function named getCharactersWithoutChildren that, given the array of cha
 ------------------------------------------------------------------------------------------------ */
 
 const characters = [{
-    name: 'Eddard',
-    spouse: 'Catelyn',
-    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-    house: 'Stark',
-  },
-  {
-    name: 'Jon',
-    spouse: 'Lysa',
-    children: ['Robin'],
-    house: 'Arryn',
-  },
-  {
-    name: 'Cersei',
-    spouse: 'Robert',
-    children: ['Joffrey', 'Myrcella', 'Tommen'],
-    house: 'Lannister',
-  },
-  {
-    name: 'Daenarys',
-    spouse: 'Khal Drogo',
-    children: ['Drogon', 'Rhaegal', 'Viserion'],
-    house: 'Targaryen',
-  },
-  {
-    name: 'Mace',
-    spouse: 'Alerie',
-    children: ['Margaery', 'Loras'],
-    house: 'Tyrell',
-  },
-  {
-    name: 'Sansa',
-    spouse: 'Tyrion',
-    house: 'Stark',
-  },
-  {
-    name: 'Jon',
-    spouse: null,
-    house: 'Snow',
-  },
+  name: 'Eddard',
+  spouse: 'Catelyn',
+  children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+  house: 'Stark',
+},
+{
+  name: 'Jon',
+  spouse: 'Lysa',
+  children: ['Robin'],
+  house: 'Arryn',
+},
+{
+  name: 'Cersei',
+  spouse: 'Robert',
+  children: ['Joffrey', 'Myrcella', 'Tommen'],
+  house: 'Lannister',
+},
+{
+  name: 'Daenarys',
+  spouse: 'Khal Drogo',
+  children: ['Drogon', 'Rhaegal', 'Viserion'],
+  house: 'Targaryen',
+},
+{
+  name: 'Mace',
+  spouse: 'Alerie',
+  children: ['Margaery', 'Loras'],
+  house: 'Tyrell',
+},
+{
+  name: 'Sansa',
+  spouse: 'Tyrion',
+  house: 'Stark',
+},
+{
+  name: 'Jon',
+  spouse: null,
+  house: 'Snow',
+},
 ];
 
 const getCharactersWithoutChildren = (arr) => {
@@ -317,29 +316,29 @@ describe('Testing challenge 6', () => {
 
   test('It should work for non-snorlax data', () => {
     expect(getStatName([{
-        baseStat: 10,
-        stat: {
-          name: 'one'
-        }
-      },
-      {
-        baseStat: -85,
-        stat: {
-          name: 'two'
-        }
-      },
-      {
-        baseStat: 0,
-        stat: {
-          name: 'three'
-        }
-      },
-      {
-        baseStat: -50,
-        stat: {
-          name: 'four'
-        }
+      baseStat: 10,
+      stat: {
+        name: 'one'
       }
+    },
+    {
+      baseStat: -85,
+      stat: {
+        name: 'two'
+      }
+    },
+    {
+      baseStat: 0,
+      stat: {
+        name: 'three'
+      }
+    },
+    {
+      baseStat: -50,
+      stat: {
+        name: 'four'
+      }
+    }
     ], -60)).toStrictEqual(['one', 'three', 'four']);
   });
 });
