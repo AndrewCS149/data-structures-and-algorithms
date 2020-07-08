@@ -1,0 +1,13 @@
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\bin\Debug\netcoreapp3.1\ArrayShift.exe
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\bin\Debug\netcoreapp3.1\ArrayShift.deps.json
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\bin\Debug\netcoreapp3.1\ArrayShift.runtimeconfig.json
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\bin\Debug\netcoreapp3.1\ArrayShift.runtimeconfig.dev.json
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\bin\Debug\netcoreapp3.1\ArrayShift.dll
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\bin\Debug\netcoreapp3.1\ArrayShift.pdb
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\obj\Debug\netcoreapp3.1\ArrayShift.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\obj\Debug\netcoreapp3.1\ArrayShift.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\obj\Debug\netcoreapp3.1\ArrayShift.AssemblyInfo.cs
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\obj\Debug\netcoreapp3.1\ArrayShift.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\obj\Debug\netcoreapp3.1\ArrayShift.dll
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\obj\Debug\netcoreapp3.1\ArrayShift.pdb
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\ArrayShift\ArrayShift\obj\Debug\netcoreapp3.1\ArrayShift.genruntimeconfig.cache
