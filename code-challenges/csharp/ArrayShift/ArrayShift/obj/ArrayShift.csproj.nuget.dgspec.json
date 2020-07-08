@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\Desktop\\code\\codeFellows\\code401\\data-structures-and-algorithms\\code-challenges\\csharp\\ArrayShift\\ArrayShift\\ArrayShift.csproj": {}
+    "C:\\Users\\andre\\desktop\\code\\codeFellows\\code401\\data-structures-and-algorithms\\code-challenges\\csharp\\ArrayShift\\ArrayShift\\ArrayShift.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\Desktop\\code\\codeFellows\\code401\\data-structures-and-algorithms\\code-challenges\\csharp\\ArrayShift\\ArrayShift\\ArrayShift.csproj": {
+    "C:\\Users\\andre\\desktop\\code\\codeFellows\\code401\\data-structures-and-algorithms\\code-challenges\\csharp\\ArrayShift\\ArrayShift\\ArrayShift.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Desktop\\code\\codeFellows\\code401\\data-structures-and-algorithms\\code-challenges\\csharp\\ArrayShift\\ArrayShift\\ArrayShift.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\desktop\\code\\codeFellows\\code401\\data-structures-and-algorithms\\code-challenges\\csharp\\ArrayShift\\ArrayShift\\ArrayShift.csproj",
         "projectName": "ArrayShift",
-        "projectPath": "C:\\Users\\andre\\Desktop\\code\\codeFellows\\code401\\data-structures-and-algorithms\\code-challenges\\csharp\\ArrayShift\\ArrayShift\\ArrayShift.csproj",
+        "projectPath": "C:\\Users\\andre\\desktop\\code\\codeFellows\\code401\\data-structures-and-algorithms\\code-challenges\\csharp\\ArrayShift\\ArrayShift\\ArrayShift.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Desktop\\code\\codeFellows\\code401\\data-structures-and-algorithms\\code-challenges\\csharp\\ArrayShift\\ArrayShift\\obj\\",
+        "outputPath": "C:\\Users\\andre\\desktop\\code\\codeFellows\\code401\\data-structures-and-algorithms\\code-challenges\\csharp\\ArrayShift\\ArrayShift\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
