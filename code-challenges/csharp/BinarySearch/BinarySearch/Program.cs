@@ -3,16 +3,14 @@ using System.Runtime.InteropServices.ComTypes;
 
 namespace BinarySearch
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-
             int[] nums = new int[] { 4, 8, 15, 16, 23, 42 };
             int[] nums2 = new int[] { 11, 22, 33, 44, 55, 66, 77 };
             Console.WriteLine(BinarySearch(nums, 15));
             Console.WriteLine(BinarySearch(nums2, 90));
-
         }
 
         /// <summary>
@@ -21,24 +19,13 @@ namespace BinarySearch
         /// <param name="arr">Array to search through</param>
         /// <param name="search">Value to search for</param>
         /// <returns>The idx position of the search value</returns>
-        static int BinarySearch(int[] arr, int search)
+        public static int BinarySearch(int[] arr, int search)
         {
             // get the length of the arr
             int arrLength = 0;
             foreach (int num in arr)
             {
                 arrLength++;
-            }
-
-            // sort the array
-            for (int i = 1; i < arrLength; i++)
-            {
-                if(arr[i] < arr[i-1])
-                {
-                    int temp = arr[i - 1];
-                    arr[i - 1] = arr[i];
-                    arr[i] = temp;
-                }
             }
 
             // find the search value
