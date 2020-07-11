@@ -14,3 +14,4 @@ This contains a set of daily coding challenges that will be done either individu
 **C-Sharp**
 * [array shift](code-challenges/csharp/ArrayShift)
 * [array binary search](code-challenges/csharp/BinarySearch)
+* [linked list](code-Challenges/csharp/LinkedList)
