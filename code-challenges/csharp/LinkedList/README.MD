@@ -17,10 +17,15 @@ Create a linked list library
 ---
 ## Visuals
 
-*empty*
+**WhiteBoard**
+
+![whiteboard image](./assets/whiteboard.jpg)
 
 ---
 ## Change Log
+
+June 13 2020
+* LinkedList Append() method
 
 10 June 2020
   * LinkedList library
