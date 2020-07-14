@@ -65,6 +65,11 @@ namespace LinkedListLibrary
                 Head = newNode;
                 return;
             }
+            else if (Head.Value == value)
+            {
+                Insert(newValue);
+                return;
+            }
             else
             {
                 while (current.Next != null)
