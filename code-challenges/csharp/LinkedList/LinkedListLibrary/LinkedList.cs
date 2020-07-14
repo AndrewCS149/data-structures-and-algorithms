@@ -33,12 +33,12 @@ namespace LinkedListLibrary
         /// <param name="value">The value to append</param>
         public void Append(int value)
         {
-            Node node = new Node(value);
+            Node newNode = new Node(value);
             Node current = Head;
 
             if (Head == null)
             {
-                Head = node;
+                Head = newNode;
             }
             else
             {
@@ -46,8 +46,40 @@ namespace LinkedListLibrary
                 {
                     current = current.Next;
                 }
-                current.Next = node;
+                current.Next = newNode;
             }
+        }
+
+        /// <summary>
+        /// Insert the passed in 'value' directly before the passed in 'newValue'
+        /// </summary>
+        /// <param name="value">Value to insert</param>
+        /// <param name="newValue">Value to insert before</param>
+        public void InsertBefore(int value, int newValue)
+        {
+            Node newNode = new Node(newValue);
+            Node current = Head;
+
+            if (Head ==  null)
+            {
+                Head = newNode;
+                return;
+            }
+            else
+            {
+                while (current.Next != null)
+                {
+                    if (current.Next.Value == value)
+                    {
+                        Node temp = current.Next;
+                        current.Next = newNode;
+                        newNode.Next = temp;
+                        return;
+                    }
+                    current = current.Next;
+                }
+            }
+            throw new Exception("Sorry. That value does not exist within the current list.");
         }
 
         /// <summary>

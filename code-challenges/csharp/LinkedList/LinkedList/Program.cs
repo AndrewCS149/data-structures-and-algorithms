@@ -9,9 +9,6 @@ namespace LinkedList
         {
         }
 
-        static void Test()
-        {
-            LinkedList list = new LinkedList();
-        }
+
     }
 }
