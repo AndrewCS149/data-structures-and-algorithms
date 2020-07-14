@@ -1,9 +1,9 @@
 # Table of Contents
 
 #### Code Challenges
-* [array shift](code-challenges/csharp/ArrayShift)
-* [array binary search](code-challenges/csharp/BinarySearch)
+* [array shift](code-challenges/ArrayShift)
+* [array binary search](code-challenges/BinarySearch)
 
 ---
 #### Data Structures
-* [linked list](code-Challenges/csharp/LinkedList)
+* [linked list](code-Challenges/LinkedList)
