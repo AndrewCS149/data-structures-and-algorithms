@@ -42,7 +42,7 @@ namespace LinkedListLibrary
             }
             else
             {
-                while (current != null)
+                while (current.Next != null)
                 {
                     current = current.Next;
                 }

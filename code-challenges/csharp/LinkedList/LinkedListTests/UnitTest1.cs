@@ -92,16 +92,16 @@ namespace LinkedListTests
         [Fact]
         public void CanAppendToEndOfList()
         {
+            // Arrange
             LinkedList list = new LinkedList();
-            list.Insert(4);
-            list.Insert(8);
-            list.Insert(15);
-            list.Insert(16);
-            list.Insert(23);
-            list.Insert(42);
+            int valueToAppend = 45;
 
-            int value = 44;
-            //string expected = 
+            // Act
+            list.Append(valueToAppend);
+            bool exists = list.Includes(valueToAppend);
+
+            // Assert
+            Assert.True(exists);
         }
     }
 }

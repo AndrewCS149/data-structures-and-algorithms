@@ -5,4 +5,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LinkedListLibrary\LinkedListLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="LinkedListLibrary">
+      <HintPath>..\LinkedListLibrary\bin\Debug\netcoreapp3.1\LinkedListLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
