@@ -11,3 +11,6 @@ C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\c
 C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\LinkedList\LinkedList\obj\Debug\netcoreapp3.1\LinkedList.dll
 C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\LinkedList\LinkedList\obj\Debug\netcoreapp3.1\LinkedList.pdb
 C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\LinkedList\LinkedList\obj\Debug\netcoreapp3.1\LinkedList.genruntimeconfig.cache
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\LinkedList\LinkedList\bin\Debug\netcoreapp3.1\LinkedListLibrary.dll
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\LinkedList\LinkedList\bin\Debug\netcoreapp3.1\LinkedListLibrary.pdb
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\LinkedList\LinkedList\obj\Debug\netcoreapp3.1\LinkedList.csproj.CopyComplete

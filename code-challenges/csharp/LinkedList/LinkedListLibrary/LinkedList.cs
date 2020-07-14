@@ -28,6 +28,97 @@ namespace LinkedListLibrary
         }
 
         /// <summary>
+        /// Adds node to the end of a linked list
+        /// </summary>
+        /// <param name="value">The value to append</param>
+        public void Append(int value)
+        {
+            Node newNode = new Node(value);
+            Node current = Head;
+
+            if (Head == null)
+            {
+                Head = newNode;
+            }
+            else
+            {
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+                current.Next = newNode;
+            }
+        }
+
+        /// <summary>
+        /// Insert the passed in 'value' directly before the passed in 'newValue'
+        /// </summary>
+        /// <param name="value">Value to insert</param>
+        /// <param name="newValue">Value to insert before</param>
+        public void InsertBefore(int value, int newValue)
+        {
+            Node newNode = new Node(newValue);
+            Node current = Head;
+
+            if (Head ==  null)
+            {
+                Head = newNode;
+                return;
+            }
+            else if (Head.Value == value)
+            {
+                Insert(newValue);
+                return;
+            }
+            else
+            {
+                while (current.Next != null)
+                {
+                    if (current.Next.Value == value)
+                    {
+                        Node temp = current.Next;
+                        current.Next = newNode;
+                        newNode.Next = temp;
+                        return;
+                    }
+                    current = current.Next;
+                }
+            }
+            throw new Exception("Sorry. That value does not exist within the current list.");
+        }
+
+        /// <summary>
+        /// Insert the passed in 'value' directly after the passed in 'newValue'
+        /// </summary>
+        /// <param name="value">Value to insert</param>
+        /// <param name="newValue">Value to insert after</param>
+        public void InsertAfter(int value, int newValue)
+        {
+            Node newNode = new Node(newValue);
+            Node current = Head;
+
+            if(Head == null)
+            {
+                Head = newNode;
+                return;
+            }
+            else
+            {
+                while (current != null)
+                {
+                    if (current.Value == value)
+                    {
+                        newNode.Next = current.Next;
+                        current.Next = newNode;
+                        return;
+                    }
+                    current = current.Next;
+                }
+            }
+            throw new Exception("Sorry. That value does not exist within the current list.");
+        }
+
+        /// <summary>
         /// Finds a value in the linked list
         /// O(n) time efficiency 
         /// </summary>

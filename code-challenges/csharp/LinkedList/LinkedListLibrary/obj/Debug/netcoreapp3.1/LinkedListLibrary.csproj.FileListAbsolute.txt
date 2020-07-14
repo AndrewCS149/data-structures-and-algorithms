@@ -6,3 +6,4 @@ C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\c
 C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\LinkedList\LinkedListLibrary\obj\Debug\netcoreapp3.1\LinkedListLibrary.csproj.CoreCompileInputs.cache
 C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\LinkedList\LinkedListLibrary\obj\Debug\netcoreapp3.1\LinkedListLibrary.dll
 C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\LinkedList\LinkedListLibrary\obj\Debug\netcoreapp3.1\LinkedListLibrary.pdb
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\code-challenges\csharp\LinkedList\LinkedListLibrary\obj\Debug\netcoreapp3.1\LinkedListLibrary.csprojAssemblyReference.cache
