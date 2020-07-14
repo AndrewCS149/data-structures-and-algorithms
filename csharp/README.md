@@ -6,4 +6,4 @@
 
 ---
 #### Data Structures
-* [linked list](code-Challenges/LinkedList)
+* [linked list](data-structures/LinkedList)
