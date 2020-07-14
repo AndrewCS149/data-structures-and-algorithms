@@ -28,6 +28,29 @@ namespace LinkedListLibrary
         }
 
         /// <summary>
+        /// Adds node to the end of a linked list
+        /// </summary>
+        /// <param name="value">The value to append</param>
+        public void Append(int value)
+        {
+            Node node = new Node(value);
+            Node current = Head;
+
+            if (Head == null)
+            {
+                Head = node;
+            }
+            else
+            {
+                while (current != null)
+                {
+                    current = current.Next;
+                }
+                current.Next = node;
+            }
+        }
+
+        /// <summary>
         /// Finds a value in the linked list
         /// O(n) time efficiency 
         /// </summary>

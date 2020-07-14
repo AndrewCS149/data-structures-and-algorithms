@@ -88,5 +88,20 @@ namespace LinkedListTests
 
             Assert.Equal(expected, value);
         }
+
+        [Fact]
+        public void CanAppendToEndOfList()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Insert(23);
+            list.Insert(42);
+
+            int value = 44;
+            //string expected = 
+        }
     }
 }
