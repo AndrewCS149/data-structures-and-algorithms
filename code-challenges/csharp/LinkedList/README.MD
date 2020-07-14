@@ -1,18 +1,11 @@
-# Challenges
-
-## Linked List Library
+# Linked List Library
 
 *Author: Andrew Smith*
 
 ---
 ## Problem Domain
 
-Create a linked list library
-
----
-## Inputs / Outputs
-
-*empty*
+Create a linked list library to reference in other projects
 
 ---
 ## Visuals
@@ -25,7 +18,9 @@ Create a linked list library
 ## Change Log
 
 June 13 2020
-* LinkedList Append() method
+* Append() method
+* InsertBefore() method
+* InsertAfter() method
 
 10 June 2020
   * LinkedList library
