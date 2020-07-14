@@ -1,0 +1,15 @@
+# Table of Content
+
+* [value-vs-reference](value-vs-reference)
+* [sort](sort)
+* [regular expressions](regular-expressions)
+* [for each](for-each)
+* [array & string manipulation](array-and-string-methods)
+* [key value entries](06-keys-values-entries)
+* [map](07-map)
+* [filter](08-filter)
+* [reduce](09-reduce)
+* [chaining methods](10-chaining-methods)
+* [regular expressions pt 2](10-regex-02)
+* [2D array](12-2d-arrays)
+* [every sub charAt](13-every-sub-charAt)
