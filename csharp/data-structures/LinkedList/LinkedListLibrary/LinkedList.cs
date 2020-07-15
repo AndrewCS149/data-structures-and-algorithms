@@ -20,10 +20,39 @@ namespace LinkedListLibrary
         /// </summary>
         /// <param name="value">The kth element.</param>
         /// <returns>Returns node.</returns>
-        public int KthFromEnd(int value)
+        public int KthFromEnd(int k)
         {
+            if (k < 0)
+                throw new Exception("K cannot be less than zero");
 
-            return 0;
+            Node current = Head;
+            int listLen = 0;
+
+            // get length of list
+            while(current != null)
+            {
+                current = current.Next;
+                listLen++;
+            }
+
+            if (k >= listLen)
+                throw new Exception("K cannot be greater than or equal to the list length");
+
+            int target = listLen - k;
+            current = Head;
+
+            // find kth element from end of list
+            int count = 1;
+            while(current != null)
+            {
+                if (count == target)
+                {
+                    return current.Value;
+                }
+                count++;
+                current = current.Next;
+            }
+            throw new Exception("That value does not exists");
         }
 
         /// <summary>

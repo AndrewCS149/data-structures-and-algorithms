@@ -207,5 +207,102 @@ namespace LinkedListTests
             // Assert
             Assert.Equal(expected, actual);
         }
+
+        // Test 'KthFromEnd()' 
+        [Fact]
+        public void CanReturnKthFromEnd()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            int value = 3;
+
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Insert(23);
+            list.Insert(42);
+
+            // Act
+            int actual = list.KthFromEnd(value);
+            int expected = 16;
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        // Test 'KthFromEnd()'
+        [Fact]
+        public void CanReturnExceptionForEqualLength()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(10);
+            list.Insert(20);
+            list.Insert(30);
+            list.Insert(40);
+            list.Insert(50);
+ 
+            // Act
+            var ex = Assert.Throws<Exception>(() => list.KthFromEnd(5));
+
+            // Assert
+            Assert.Equal("K cannot be greater than or equal to the list length", ex.Message);
+        }
+
+        // Test 'KthFromEnd()'
+        [Fact]
+        public void CanReturnExceptionForKBeingGreaterThanLengthOfList()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(10);
+            list.Insert(20);
+            list.Insert(30);
+            list.Insert(40);
+            list.Insert(50);
+
+            // Act
+            var ex = Assert.Throws<Exception>(() => list.KthFromEnd(5));
+
+            // Assert
+            Assert.Equal("K cannot be greater than or equal to the list length", ex.Message);
+        }
+
+        // Test 'KthFromEnd()'
+        [Fact]
+        public void CanReturnExceptionForKBeingNegativeNumber()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Insert(10);
+            list.Insert(20);
+            list.Insert(30);
+            list.Insert(40);
+            list.Insert(50);
+
+            // Act
+            var ex = Assert.Throws<Exception>(() => list.KthFromEnd(-1));
+
+            // Assert
+            Assert.Equal("K cannot be less than zero", ex.Message);
+        }
+
+        // Test 'KthFromEnd()'
+        [Fact]
+        public void CanReturnKthFromEndWhereListIsOfSize1()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            int value = 0;
+            list.Insert(10);
+
+            // Act
+            int actual = list.KthFromEnd(value);
+            int expected = 10;
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
     }
 }
