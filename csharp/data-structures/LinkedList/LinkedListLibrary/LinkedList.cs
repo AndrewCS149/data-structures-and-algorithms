@@ -16,6 +16,17 @@ namespace LinkedListLibrary
         }
 
         /// <summary>
+        /// Return the node's value that is kth nodes from the end of the list.
+        /// </summary>
+        /// <param name="value">The kth element.</param>
+        /// <returns>Returns node.</returns>
+        public int KthFromEnd(int value)
+        {
+
+            return 0;
+        }
+
+        /// <summary>
         /// Adds new node to the front of the linked list. O(1) time operation
         /// </summary>
         /// /// <param name="value">value to be stored in the node</param>
