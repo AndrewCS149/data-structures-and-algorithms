@@ -42,6 +42,19 @@ Create a new node holding the value of the passed in 'newValue'. Establish a cur
 of the 'Head'. Using a while loop, iterate through the list until the 'current.Next' value is null. If
 'current.Next' value is null, then insert the 'newValue' into the 'current.Next' position.
 
+**Insert:**
+Create a new node with value that was passed in and assign the 'node.Next' as the 'Head'. Then, assign the 'Head'
+as the new node.
+
+**Includes:**
+Assign 'current' as head. Iterate through the linked list with a while loop. Check each node to see if its value
+to see if it matches the passed in 'value'. If a match is found, return true. Otherwise return false.
+
+**ToString:**
+Assign 'current' as head. Initialize a 'StringBuilder' variable. Iterate through the linked list with a while loop.
+On each pass, use the existing 'Append()' method to append the current value to the StringBuilder variable. Once
+finished, return the StringBuilder variable.
+
 ---
 ### WhiteBoard Solutions
 
