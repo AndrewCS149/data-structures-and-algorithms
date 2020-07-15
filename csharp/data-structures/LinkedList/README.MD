@@ -10,12 +10,19 @@ Create a linked list library to reference in other projects
 ---
 ## Visuals
 
-**WhiteBoard**
+**WhiteBoards:**
 
-![whiteboard image](./assets/whiteboard.jpg)
+**Append() method**
+![whiteboard image](../../assets/linkedListWB.jpg)
+---
+**KthFromEnd() method**
+![whiteboard image](../../assets/KthFromEndWB.jpg)
 
 ---
 ## Change Log
+
+June 14 2020
+* KthFromEnd() method
 
 June 13 2020
 * Append() method
