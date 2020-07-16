@@ -200,5 +200,24 @@ namespace LinkedListLibrary
 
             return sb.ToString();
         }
+
+                public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < count; i++)
+            {
+                yield return items[i];
+            }
+        }
+
+        public int Count()
+        {
+            return count;
+        }
+
+        // magic, dont touch
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }
