@@ -1,0 +1,16 @@
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\bin\Debug\netcoreapp3.1\LLZip.exe
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\bin\Debug\netcoreapp3.1\LLZip.deps.json
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\bin\Debug\netcoreapp3.1\LLZip.runtimeconfig.json
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\bin\Debug\netcoreapp3.1\LLZip.runtimeconfig.dev.json
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\bin\Debug\netcoreapp3.1\LLZip.dll
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\bin\Debug\netcoreapp3.1\LLZip.pdb
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\bin\Debug\netcoreapp3.1\LinkedListLibrary.dll
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\bin\Debug\netcoreapp3.1\LinkedListLibrary.pdb
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\obj\Debug\netcoreapp3.1\LLZip.csprojAssemblyReference.cache
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\obj\Debug\netcoreapp3.1\LLZip.AssemblyInfoInputs.cache
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\obj\Debug\netcoreapp3.1\LLZip.AssemblyInfo.cs
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\obj\Debug\netcoreapp3.1\LLZip.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\obj\Debug\netcoreapp3.1\LLZip.csproj.CopyComplete
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\obj\Debug\netcoreapp3.1\LLZip.dll
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\obj\Debug\netcoreapp3.1\LLZip.pdb
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\code-challenges\LLZip\LLZip\obj\Debug\netcoreapp3.1\LLZip.genruntimeconfig.cache

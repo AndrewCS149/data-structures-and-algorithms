@@ -25,6 +25,6 @@ Given a sorted array and a target value, return the index position of the target
 
 ## Change Log
 
-8 June 2020
+8 July 2020
   * Added BinarySearch() method
   * Add testing for BinarySearch() method
