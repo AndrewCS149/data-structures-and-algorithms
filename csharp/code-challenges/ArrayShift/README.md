@@ -33,5 +33,5 @@ WhiteBoard
 
 ## Change Log
 
-7 June 2020
+7 July 2020
   * Added InsertShiftArray() method
