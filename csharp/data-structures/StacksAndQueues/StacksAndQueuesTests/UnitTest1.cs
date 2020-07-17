@@ -2,8 +2,7 @@ using System;
 using Xunit;
 using StacksAndQueues;
 
-
-namespace StacksAndQueuesTests
+namespace StacksAndQueusTests
 {
     public class UnitTest1
     {
