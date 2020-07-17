@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace StacksAndQueues
@@ -28,6 +29,15 @@ namespace StacksAndQueues
             if (Top.Value == null)
                 throw new NullReferenceException("Stack is empty");
             return Top.Value;
+        } 
+
+        /// <summary>
+        /// Check if the stack is empty or not
+        /// </summary>
+        /// <returns>Returns true if empty, false if not</returns>
+        public bool IsEmpty()
+        {
+            return Top == null ? true : false;
         }
     }
 }

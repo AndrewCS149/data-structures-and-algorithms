@@ -20,7 +20,7 @@ namespace StacksAndQueusTests
             Assert.Equal("candy cane", stack.Top.Value);
         }
 
-        //// Test Peek()
+        // Test Peek()
         [Fact]
         public void CanPeekTopAndReturnItsValue()
         {
@@ -33,6 +33,20 @@ namespace StacksAndQueusTests
 
             // assert
             Assert.Equal("Dog", actual);
+        }
+
+        // Test IsEmpty()
+        [Fact]
+        public void CanReturnTrueIfStackIsEmpty()
+        {
+            // arrange
+            Stack stack = new Stack();
+
+            // act
+            bool emptyStack = stack.IsEmpty();
+
+            // assert
+            Assert.True(emptyStack);
         }
     }
 }
