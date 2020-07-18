@@ -20,6 +20,21 @@ namespace StacksAndQueusTests
             Assert.Equal("candy cane", stack.Top.Value);
         }
 
+        // Test Pop()
+        [Fact]
+        public void CanRemoveTopNodeAndReturnItsValue()
+        {
+            // arrange
+            Stack stack = new Stack();
+
+            // act
+            stack.Push("Dog");
+            string topValue = stack.Pop();
+
+            // assert
+            Assert.Equal("Dog", topValue);
+        }
+
         // Test Peek()
         [Fact]
         public void CanPeekTopAndReturnItsValue()

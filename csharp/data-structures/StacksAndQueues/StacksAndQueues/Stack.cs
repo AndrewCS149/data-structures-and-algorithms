@@ -13,11 +13,24 @@ namespace StacksAndQueues
         /// Pushes a new node to the top of the stack
         /// </summary>
         /// <param name="value">Value of the node to push</param>
-        public void Push(string value)
+        public void Push(string val)
         {
-            Node node = new Node(value);
+            Node node = new Node(val);
             node.Next = Top;
             Top = node;
+        }
+
+        /// <summary>
+        /// Removes the top node and returns its value
+        /// </summary>
+        /// <returns>Returns the top nodes string value</returns>
+        public string Pop()
+        {
+            if(Top.Value == null)
+                throw new NullReferenceException("Stack is empty");
+            Node temp = Top;
+            Top = Top.Next;
+            return temp.Value;
         }
 
         /// <summary>
