@@ -49,5 +49,18 @@ namespace StacksAndQueues
 
             return temp.Value;
         }
+
+        /// <summary>
+        /// Returns the front node's value without removing it
+        /// </summary>
+        /// <returns>The front nodes value</returns>
+        public string peek()
+        {
+            // if stack is empty
+            if (Front == null)
+                throw new NullReferenceException("Queue is empty");
+
+            return Front.Value;
+        }
     }
 }

@@ -64,5 +64,23 @@ namespace StacksAndQueuesTests
             // assert
             Assert.Equal("Dog", frontValue);
         }
+
+        // Test Peek() 
+        [Fact]
+        public void CanReturnTheFrontValueWithoutRemovingIt()
+        {
+            // arrange
+            Queue queue = new Queue();
+
+            // act
+            queue.Enqueue("Dog");
+            queue.Enqueue("Cat");
+            queue.Enqueue("Mouse");
+
+            string frontValue = queue.peek();
+
+            // assert
+            Assert.Equal("Dog", frontValue);
+        }
     }
 }
