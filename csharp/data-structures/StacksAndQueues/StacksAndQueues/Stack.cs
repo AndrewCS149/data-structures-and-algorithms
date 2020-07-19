@@ -26,7 +26,7 @@ namespace StacksAndQueues
         /// <returns>Returns the top nodes string value</returns>
         public string Pop()
         {
-            if(Top.Value == null)
+            if (Top.Value == null)
                 throw new NullReferenceException("Stack is empty");
             Node temp = Top;
             Top = Top.Next;
