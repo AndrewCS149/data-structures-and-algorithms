@@ -8,3 +8,4 @@
 ---
 #### Data Structures
 * [linked list](data-structures/LinkedList)
+* [stacks & queues](data-structures/StacksAndQueues)
