@@ -135,7 +135,7 @@ namespace StacksAndQueusTests
             // act
             Action act = () => stack.Pop();
             var exception = Assert.Throws<NullReferenceException>(act);
-            //var expected = ThrowsException
+
             // assert
             Assert.Equal("Object reference not set to an instance of an object.", exception.Message);
         }

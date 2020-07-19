@@ -20,6 +20,7 @@
 ---
 ### Change Log
 
+- 1.5 IsEmpty() for Queue class - July 18 2020
 - 1.4 Peek() - 18 July 2020
 - 1.3 Dequeue() - 18 July 2020
 - 1.2 Push() / Pop() / Peek() / IsEmpty() - 17 July 2020
