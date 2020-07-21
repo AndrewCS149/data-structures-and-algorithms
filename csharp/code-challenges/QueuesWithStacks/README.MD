@@ -17,10 +17,18 @@ approach.
 
 **Enqueue()**
 
+Time - O(n)
+
+Space - O(n)
+
 Enqueues a value into the PseudoQueue(stack) with a FIFO(first in first out) 
 approach.
 
 **Dequeue()**
+
+Time - O(n)
+
+Space - O(n)
 
 Dequeues a value from the PseudoQueue with a FIFO approach.
 
