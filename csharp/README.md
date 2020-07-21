@@ -4,6 +4,7 @@
 * [array shift](code-challenges/ArrayShift)
 * [array binary search](code-challenges/BinarySearch)
 * [zipped lists](code-challenges/LLZip)
+* [queues with stacks](code-challenges/QueuesWithStacks)
 
 ---
 #### Data Structures
