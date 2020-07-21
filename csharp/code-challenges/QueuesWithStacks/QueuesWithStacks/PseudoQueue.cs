@@ -5,7 +5,6 @@ namespace QueuesWithStacks
 {
     public class PseudoQueue
     {
-
         public Stack MyStack { get; set; }
 
         public PseudoQueue()
@@ -47,6 +46,10 @@ namespace QueuesWithStacks
             }
         }
 
+        /// <summary>
+        /// Dequeues a node from the stack and returns it's value
+        /// </summary>
+        /// <returns>The bottom node's value from the stack</returns>
         public string Dequeue()
         {
             // if stack is empty

@@ -42,5 +42,35 @@ namespace QueuesWithStacksTests
             // assert
             Assert.Equal("Bear", returnedValue);
         }
+
+        // Test Dequeue
+        [Fact]
+        public void CanThrowIfDequeueOnAnEmptyStack()
+        {
+            // arrange 
+            PseudoQueue myStack = new PseudoQueue();
+
+            // act
+            Action act = () => myStack.Dequeue();
+            var exception = Assert.Throws<NullReferenceException>(act);
+
+            // assert
+            Assert.Equal("Stack is empty", exception.Message);
+        }
+
+        // Test Enqueue
+        [Fact]
+        public void CanEnqueueOnToEmptyStack()
+        {
+            // arrange
+            PseudoQueue myStack = new PseudoQueue();
+            myStack.Enqueue("Dog");
+
+            // act
+            string returnedValue = myStack.Peek();
+
+            // assert
+            Assert.Equal("Dog", returnedValue);
+        }
     }
 }
