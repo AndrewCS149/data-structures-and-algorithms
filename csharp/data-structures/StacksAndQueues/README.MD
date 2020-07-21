@@ -15,16 +15,32 @@ that create a simplified version of queues and stacks from scratch.
 **Stack Class**
 
 - Push() - pushes a value to the top of the stack
+  - Time - O(1)
+  - Space - O(n)
 - Pop() - pops off the value of the top node and returns its value
+  - Time - O(1)
+  - Space - O(n)
 - Peek() - returns the value of the top node without removing it
+  - Time - O(1)
+  - Space - O(1)
 - IsEmpty() - Checks whether a stack is empty or not
+  - Time - O(1)
+  - Space - O(1)
 
 **Queue Class**
 
 - Enqueue() - Places a node into the rear of the queue
+  - Time - O(1)
+  - Space - O(n)
 - Dequeue() - Removes the front node and returns its value
+  - Time - O(1)
+  - Space - O(n)
 - Peek() - Returns the front nodes value without removing it
+  - Time - O(1)
+  - Space - O(1)
 - IsEmpty() - Checks whether a stack is empty or not
+  - Time - O(1)
+  - Space - O(1)
 
 ---
 

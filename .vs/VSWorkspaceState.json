@@ -4,11 +4,11 @@
     "\\csharp",
     "\\csharp\\data-structures",
     "\\csharp\\data-structures\\LinkedList",
-    "\\csharp\\data-structures\\QueueWithStacks",
+    "\\csharp\\data-structures\\LinkedList\\LinkedListLibrary",
     "\\csharp\\data-structures\\StacksAndQueues",
     "\\csharp\\data-structures\\StacksAndQueues\\StacksAndQueues",
     "\\csharp\\data-structures\\StacksAndQueues\\StacksAndQueuesTests"
   ],
-  "SelectedNode": "\\csharp\\data-structures\\StacksAndQueues\\StacksAndQueues\\Queue.cs",
+  "SelectedNode": "\\csharp\\README.md",
   "PreviewInSolutionExplorer": false
 }
