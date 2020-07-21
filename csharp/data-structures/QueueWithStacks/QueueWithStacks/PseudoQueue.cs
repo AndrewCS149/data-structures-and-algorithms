@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections;
+using System.Xml;
 
 namespace QueueWithStacks
 {
     public class PseudoQueue
     {
         public Stack Stack { get; set; }
+        public Node Top { get; set; }
 
-        public PseudoQueue(Stack stack)
+        public PseudoQueue()
         {
-            Stack = stack;
+            Stack = new Stack();
         }
 
         /// <summary>
@@ -18,8 +20,10 @@ namespace QueueWithStacks
         /// <param name="val">The int value to enqueue</param>
         public void Enqueue(int val)
         {
-            Stack.Push(val);
+            //PseudoQueue flipped = new PseudoQueue(Stack);
 
+            
+            Stack.Push(val);
         }
 
         /// <summary>
@@ -28,6 +32,10 @@ namespace QueueWithStacks
         /// <returns>Returns the dequeued int value</returns>
         public int Dequeue()
         {
+            Stack flipped = new Stack();
+            
+            while(flipped)
+
 
             return -1;
         }
