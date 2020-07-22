@@ -65,6 +65,7 @@ Dequeues a value from the PseudoQueue with a FIFO approach.
 
 ### Change Log
 
+- 1.6 Make all classes generic - 21 July 2020
 - 1.5 Fix Dequeue() bug returning wrong value - 21 July 2020
 - 1.4 Library Complete - 20 July 2020
 - 1.3 Unit test of Dequeue() - 20 July 2020

@@ -1,21 +1,21 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace StacksAndQueues
 {
-    public class Stack
+    public class Stack<T> : IEnumerable<T>
     {
-        public Node Top { get; set; }
+        public Node<T> Top { get; set; }
 
         /// <summary>
         /// Pushes a new node to the top of the stack
         /// </summary>
         /// <param name="value">Value of the node to push</param>
-        public void Push(string val)
+        public void Push(T val)
         {
-            Node node = new Node(val);
+            Node<T> node = new Node<T>(val);
             node.Next = Top;
             Top = node;
         }
@@ -24,11 +24,11 @@ namespace StacksAndQueues
         /// Removes the top node and returns its value
         /// </summary>
         /// <returns>Returns the top nodes string value</returns>
-        public string Pop()
+        public T Pop()
         {
             if (Top.Value == null)
                 throw new NullReferenceException("Stack is empty");
-            Node temp = Top;
+            Node<T> temp = Top;
             Top = Top.Next;
             return temp.Value;
         }
@@ -37,7 +37,7 @@ namespace StacksAndQueues
         /// Removes node from top of stack
         /// </summary>
         /// <returns>Returns top node's string value</returns>
-        public string Peek()
+        public T Peek()
         {
             if (Top.Value == null)
                 throw new NullReferenceException("Stack is empty");
@@ -51,6 +51,18 @@ namespace StacksAndQueues
         public bool IsEmpty()
         {
             return Top == null ? true : false;
+        }
+
+
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

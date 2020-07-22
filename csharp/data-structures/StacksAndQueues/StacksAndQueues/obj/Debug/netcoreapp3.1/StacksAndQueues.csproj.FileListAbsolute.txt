@@ -6,3 +6,4 @@ C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\c
 C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\data-structures\StacksAndQueues\StacksAndQueues\obj\Debug\netcoreapp3.1\StacksAndQueues.csproj.CoreCompileInputs.cache
 C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\data-structures\StacksAndQueues\StacksAndQueues\obj\Debug\netcoreapp3.1\StacksAndQueues.dll
 C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\data-structures\StacksAndQueues\StacksAndQueues\obj\Debug\netcoreapp3.1\StacksAndQueues.pdb
+C:\Users\andre\Desktop\code\codeFellows\code401\data-structures-and-algorithms\csharp\data-structures\StacksAndQueues\StacksAndQueues\obj\Debug\netcoreapp3.1\StacksAndQueues.csprojAssemblyReference.cache

@@ -1,22 +1,24 @@
 ﻿using StacksAndQueues;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace QueuesWithStacks
 {
-    public class PseudoQueue
+    public class PseudoQueue<T> : IEnumerable<T>
     {
-        public Stack MyStack { get; set; }
+        public StacksAndQueues.Stack<T> MyStack { get; set; }
 
         public PseudoQueue()
         {
-            MyStack = new Stack();
+            MyStack = new StacksAndQueues.Stack<T>();
         }
 
         /// <summary>
         /// Looks at the top node in the stack (For testing purposes)
         /// </summary>
         /// <returns>Returns the top node's value</returns>
-        public string Peek()
+        public T Peek()
         {
             return MyStack.Peek();
         }
@@ -25,14 +27,14 @@ namespace QueuesWithStacks
         /// Enqueues a value into the stack with a FIFO approach
         /// </summary>
         /// <param name="val">Value to enqueue</param>
-        public void Enqueue(string val)
+        public void Enqueue(T val)
         {
             // if stack is empty
             if (MyStack.Top == null)
                 MyStack.Push(val);
             else
             {
-                Stack tempStack = new Stack();
+                StacksAndQueues.Stack<T> tempStack = new StacksAndQueues.Stack<T>();
 
                 // reverse the stack and store in tempStack
                 while (MyStack.Top != null)
@@ -50,7 +52,7 @@ namespace QueuesWithStacks
         /// Dequeues a node from the stack and returns it's value
         /// </summary>
         /// <returns>The bottom node's value from the stack</returns>
-        public string Dequeue()
+        public T Dequeue()
         {
             // if stack is empty
             if (MyStack.Top == null)
@@ -59,5 +61,17 @@ namespace QueuesWithStacks
             return MyStack.Pop();
         }
 
+
+
+        // enumerator for generics
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
