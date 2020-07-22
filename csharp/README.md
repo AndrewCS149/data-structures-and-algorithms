@@ -5,6 +5,7 @@
 * [array binary search](code-challenges/BinarySearch)
 * [zipped lists](code-challenges/LLZip)
 * [queues with stacks](code-challenges/QueuesWithStacks)
+* [FIFO animal shelter](code-challenges/FIFOAnimalShelter)
 
 ---
 #### Data Structures
