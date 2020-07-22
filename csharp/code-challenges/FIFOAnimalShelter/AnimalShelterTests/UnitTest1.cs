@@ -11,13 +11,14 @@ namespace AnimalShelterTests
         {
             // arrange
             AnimalShelter shelter = new AnimalShelter();
-            Dog dog = new Dog("Dog");
+            Dog dog = new Dog("Loki");
             
             shelter.Enqueue(dog);
 
             // act
-            var shelterString = shelter.Dequeue();
-            //shelter.Shelter.
+            Animal animal = new Animal();
+            var shelterString = shelter.Dequeue(animal);
+
             // assert
             Assert.Equal(dog, shelterString);
         }
@@ -27,15 +28,32 @@ namespace AnimalShelterTests
         {
             // arrange
             AnimalShelter shelter = new AnimalShelter();
-            Cat cat = new Cat("Cat");
+            Cat cat = new Cat("Mittens");
 
             shelter.Enqueue(cat);
 
             // act
-            var shelterString = shelter.Dequeue();
+            Animal animal = new Animal();
+            var shelterString = shelter.Dequeue(animal);
 
             // assert
             Assert.Equal(cat, shelterString);
+        }
+
+        [Fact]
+        public void CanPeekValueAndReturnIt()
+        {
+            // arrange 
+            AnimalShelter shelter = new AnimalShelter();
+            Dog dog = new Dog("Loki");
+
+            shelter.Enqueue(dog);
+
+            // act
+            var peekResult = shelter.Peek();
+
+            // assert
+            Assert.Equal(dog, peekResult);
         }
     }
 }

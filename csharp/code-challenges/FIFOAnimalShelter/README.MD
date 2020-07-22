@@ -19,25 +19,36 @@ to be Dequeued from the shelter.
 - Time - O(1)
 - Space - O(n)
 
+Enqueues a dog or cat instance into a queue
+
 **Dequeue()**
 - Time - 
 - Space - 
 
+Dequeues a dog or cat instance from a queue
+
 **Peek()**
 - Time - O(1)
 - Space - O(1)
+
+Returns the value of the first object in the queue
 
 ---
 
 ### Method Approaches
 
 **Enqueue()**
-
+- Invoke the Enqueue method from the stacks and queues library
 
 **Dequeue()**
+- If the passed in parameter is of type Animal
+  - Invoke and return the value from the Dequeue() within stacks and queues library
+- If it is not of type Animal
+  - Return null
 
 
 **Peek()**
+- Invoke and return the value from the Peek() within the stacks and queues library
 
 ---
 

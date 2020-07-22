@@ -6,11 +6,10 @@ namespace FIFOAnimalShelter.Classes
 {
     public class Cat : Animal
     {
-        public string Type { get; set; }
-
-        public Cat(string type)
+        public Cat(string name)
         {
-            Type = type;
+            Type = "Cat";
+            Name = name;
         }
     }
 }

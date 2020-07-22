@@ -22,10 +22,17 @@ namespace FIFOAnimalShelter.Classes
             Shelter.Enqueue(type);
         }
 
-
-        public Animal Dequeue()
+        /// <summary>
+        /// Dequeues an animal from the queue
+        /// </summary>
+        /// <param name="pref">Specifies which type to dequeue</param>
+        /// <returns>Returns the dequeued cat or dog, if it is not of type animal, returns null</returns>
+        public Animal Dequeue(Animal pref)
         {
-            return Shelter.Dequeue();
+            if (Shelter.Peek() is Animal)
+                return Shelter.Dequeue();
+            else
+                return null;
         }
 
         /// <summary>
