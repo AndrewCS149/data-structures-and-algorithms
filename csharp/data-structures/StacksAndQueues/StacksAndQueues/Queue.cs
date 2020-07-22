@@ -1,13 +1,14 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace StacksAndQueues
 {
-    public class Queue
+    public class Queue<T> : IEnumerable<T>
     {
-        public Node Front { get; set; }
-        public Node Rear { get; set; }
+        public Node<T> Front { get; set; }
+        public Node<T> Rear { get; set; }
 
         public Queue()
         {
@@ -18,9 +19,9 @@ namespace StacksAndQueues
         /// Enqueue a Node into a queue
         /// </summary>
         /// <param name="val">String value to enqueue</param>
-        public void Enqueue(string val)
+        public void Enqueue(T val)
         {
-            Node node = new Node(val);
+            Node<T> node = new Node<T>(val);
 
             if (Front == null)
             { 
@@ -38,13 +39,13 @@ namespace StacksAndQueues
         /// Dequeue the front node from the queue
         /// </summary>
         /// <returns>Returns the front nodes value</returns>
-        public string Dequeue()
+        public T Dequeue()
         {
             // if stack is empty
             if (Front == null)
                 throw new NullReferenceException("Queue is empty");
 
-            Node temp = Front;
+            Node<T> temp = Front;
             Front = Front.Next;
 
             return temp.Value;
@@ -54,7 +55,7 @@ namespace StacksAndQueues
         /// Returns the front node's value without removing it
         /// </summary>
         /// <returns>The front nodes value</returns>
-        public string Peek()
+        public T Peek()
         {
             // if stack is empty
             if (Front == null)
@@ -70,6 +71,16 @@ namespace StacksAndQueues
         public bool IsEmpty()
         {
             return Front == null ? true : false;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

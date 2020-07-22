@@ -12,7 +12,7 @@ namespace StacksAndQueusTests
         public void CanPushOnStack()
         {
             // arrange
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
 
             // act
             stack.Push("candy cane");
@@ -26,16 +26,16 @@ namespace StacksAndQueusTests
         public void CanPushMultipleValuesOnStack()
         {
             // arrange
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
 
             // act
             stack.Push("Andrew");
             stack.Push("Courtney");
             stack.Push("Loki");
 
-            Node top = stack.Top;
-            Node mid = stack.Top.Next;
-            Node bottom = mid.Next;
+            Node<string> top = stack.Top;
+            Node<string> mid = stack.Top.Next;
+            Node<string> bottom = mid.Next;
 
             bool fullStack = false;
             if (top.Value == "Loki" && mid.Value == "Courtney" && bottom.Value == "Andrew")
@@ -50,7 +50,7 @@ namespace StacksAndQueusTests
         public void CanEmptyStackAfterMulitplePops()
         {
             // arrange
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
 
             // act
             stack.Push("Andrew");
@@ -72,7 +72,7 @@ namespace StacksAndQueusTests
         public void CanRemoveTopNodeAndReturnItsValue()
         {
             // arrange
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
 
             // act
             stack.Push("Dog");
@@ -87,7 +87,7 @@ namespace StacksAndQueusTests
         public void CanPeekTopAndReturnItsValue()
         {
             // arrange
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
             stack.Push("Dog");
 
             // act
@@ -102,7 +102,7 @@ namespace StacksAndQueusTests
         public void CanInstantiateAStack()
         {
             // arrange
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
 
             // act 
             bool emptyStack = stack.IsEmpty();
@@ -116,7 +116,7 @@ namespace StacksAndQueusTests
         public void CanReturnTrueIfStackIsEmpty()
         {
             // arrange
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
 
             // act
             bool emptyStack = stack.IsEmpty();
@@ -130,7 +130,7 @@ namespace StacksAndQueusTests
         public void CanPopRaiseExceptionIfCalledOnAnEmptyStack()
         {
             // arrange
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
 
             // act
             Action act = () => stack.Pop();

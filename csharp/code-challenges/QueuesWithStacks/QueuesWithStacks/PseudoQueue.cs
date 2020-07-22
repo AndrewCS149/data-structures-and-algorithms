@@ -1,22 +1,24 @@
 ﻿using StacksAndQueues;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace QueuesWithStacks
 {
-    public class PseudoQueue
+    public class PseudoQueue<T> : IEnumerable<T>
     {
-        public Stack MyStack { get; set; }
+        public StacksAndQueues.Stack MyStack { get; set; }
 
         public PseudoQueue()
         {
-            MyStack = new Stack();
+            MyStack = new StacksAndQueues.Stack();
         }
 
         /// <summary>
         /// Looks at the top node in the stack (For testing purposes)
         /// </summary>
         /// <returns>Returns the top node's value</returns>
-        public string Peek()
+        public T Peek()
         {
             return MyStack.Peek();
         }
@@ -32,7 +34,7 @@ namespace QueuesWithStacks
                 MyStack.Push(val);
             else
             {
-                Stack tempStack = new Stack();
+                StacksAndQueues.Stack tempStack = new StacksAndQueues.Stack();
 
                 // reverse the stack and store in tempStack
                 while (MyStack.Top != null)
@@ -59,5 +61,17 @@ namespace QueuesWithStacks
             return MyStack.Pop();
         }
 
+
+
+        // enumerator for generics
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

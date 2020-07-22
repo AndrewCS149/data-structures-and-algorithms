@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using System.Text;
 using StacksAndQueues;
 using Xunit;
@@ -14,7 +14,7 @@ namespace StacksAndQueuesTests
         public void CanEnqueueIntoQueue()
         {
             // arrange 
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             // act
             queue.Enqueue("Courtney");
@@ -28,7 +28,7 @@ namespace StacksAndQueuesTests
         public void CanEnqueueMultipleNodesToQueue()
         {
             // arrange
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             // act
             queue.Enqueue("Dog");
@@ -52,7 +52,7 @@ namespace StacksAndQueuesTests
         public void CanDequeueAndReturnTheFrontValue()
         {
             // arrange
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             // act
             queue.Enqueue("Dog");
@@ -70,7 +70,7 @@ namespace StacksAndQueuesTests
         public void CanEmptyAQueueUsingMulitpleDequeue()
         {
             // arrange
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             // act
             queue.Enqueue("Dog");
@@ -92,7 +92,7 @@ namespace StacksAndQueuesTests
         public void CanReturnTheFrontValueWithoutRemovingIt()
         {
             // arrange
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             // act
             queue.Enqueue("Dog");
@@ -110,7 +110,7 @@ namespace StacksAndQueuesTests
         public void CanInstantiateAnEmptyQueue()
         {
             // arrange
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             // act
             bool isEmpty = queue.IsEmpty();
@@ -124,7 +124,7 @@ namespace StacksAndQueuesTests
         public void CanRaiseExceptionWhenPeekOnEmptyQueue()
         {
             // arrange
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             // act
             Action act = () => queue.Peek();
@@ -139,7 +139,7 @@ namespace StacksAndQueuesTests
         public void CanRaiseExceptionWhenDequeueOnEmptyQueue()
         {
             // arrange
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             // act
             Action act = () => queue.Dequeue();
