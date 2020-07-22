@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="QueuesWithStacks">
+      <HintPath>..\..\QueuesWithStacks\QueuesWithStacks\bin\Debug\netcoreapp3.1\QueuesWithStacks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

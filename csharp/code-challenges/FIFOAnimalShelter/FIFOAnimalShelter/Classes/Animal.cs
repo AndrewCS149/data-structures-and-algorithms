@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FIFOAnimalShelter
+namespace FIFOAnimalShelter.Classes
 {
-    class AnimalShelter
+    class Animal
     {
     }
 }
