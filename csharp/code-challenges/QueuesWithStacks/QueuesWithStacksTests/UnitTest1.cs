@@ -1,7 +1,6 @@
 using QueuesWithStacks;
 using System;
 using Xunit;
-using static QueuesWithStacks.PseudoQueue;
 
 namespace QueuesWithStacksTests
 {
@@ -12,7 +11,7 @@ namespace QueuesWithStacksTests
         public void CanEnqueueIntoPseudoQueue()
         {
             // arrange
-            PseudoQueue myStack = new PseudoQueue();
+            PseudoQueue<string> myStack = new PseudoQueue<string>();
             myStack.Enqueue("Dog");
             myStack.Enqueue("Cat");
             myStack.Enqueue("Mouse");
@@ -30,7 +29,7 @@ namespace QueuesWithStacksTests
         public void CanDequeueFromPseudoQueue()
         {
             // arrange
-            PseudoQueue myStack = new PseudoQueue();
+            PseudoQueue<string> myStack = new PseudoQueue<string>();
             myStack.Enqueue("Dog");
             myStack.Enqueue("Cat");
             myStack.Enqueue("Mouse");
@@ -48,7 +47,7 @@ namespace QueuesWithStacksTests
         public void CanThrowIfDequeueOnAnEmptyStack()
         {
             // arrange 
-            PseudoQueue myStack = new PseudoQueue();
+            PseudoQueue<string> myStack = new PseudoQueue<string>();
 
             // act
             Action act = () => myStack.Dequeue();
@@ -63,7 +62,7 @@ namespace QueuesWithStacksTests
         public void CanEnqueueOnToEmptyStack()
         {
             // arrange
-            PseudoQueue myStack = new PseudoQueue();
+            PseudoQueue<string> myStack = new PseudoQueue<string>();
             myStack.Enqueue("Dog");
 
             // act

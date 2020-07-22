@@ -7,11 +7,11 @@ namespace QueuesWithStacks
 {
     public class PseudoQueue<T> : IEnumerable<T>
     {
-        public StacksAndQueues.Stack MyStack { get; set; }
+        public StacksAndQueues.Stack<T> MyStack { get; set; }
 
         public PseudoQueue()
         {
-            MyStack = new StacksAndQueues.Stack();
+            MyStack = new StacksAndQueues.Stack<T>();
         }
 
         /// <summary>
@@ -27,14 +27,14 @@ namespace QueuesWithStacks
         /// Enqueues a value into the stack with a FIFO approach
         /// </summary>
         /// <param name="val">Value to enqueue</param>
-        public void Enqueue(string val)
+        public void Enqueue(T val)
         {
             // if stack is empty
             if (MyStack.Top == null)
                 MyStack.Push(val);
             else
             {
-                StacksAndQueues.Stack tempStack = new StacksAndQueues.Stack();
+                StacksAndQueues.Stack<T> tempStack = new StacksAndQueues.Stack<T>();
 
                 // reverse the stack and store in tempStack
                 while (MyStack.Top != null)
@@ -52,7 +52,7 @@ namespace QueuesWithStacks
         /// Dequeues a node from the stack and returns it's value
         /// </summary>
         /// <returns>The bottom node's value from the stack</returns>
-        public string Dequeue()
+        public T Dequeue()
         {
             // if stack is empty
             if (MyStack.Top == null)
