@@ -2,14 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\csharp",
+    "\\csharp\\assets",
     "\\csharp\\code-challenges",
     "\\csharp\\code-challenges\\FIFOAnimalShelter",
-    "\\csharp\\code-challenges\\FIFOAnimalShelter\\FIFOAnimalShelter",
-    "\\csharp\\code-challenges\\QueuesWithStacks",
+    "\\csharp\\code-challenges\\QueuesWithStacks\\QueuesWithStacks",
+    "\\csharp\\data-structures\\LinkedList",
     "\\csharp\\data-structures\\LinkedList\\LinkedListLibrary",
+    "\\csharp\\data-structures\\StacksAndQueues",
     "\\csharp\\data-structures\\StacksAndQueues\\StacksAndQueues",
     "\\csharp\\data-structures\\StacksAndQueues\\StacksAndQueuesTests"
   ],
-  "SelectedNode": "\\csharp\\code-challenges\\FIFOAnimalShelter\\FIFOAnimalShelter\\Program.cs",
+  "SelectedNode": "\\csharp\\assets",
   "PreviewInSolutionExplorer": false
 }
