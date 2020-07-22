@@ -16,16 +16,16 @@ to be Dequeued from the shelter.
 ### Method Descriptions
 
 **Enqueue()**
-- Time - 
-- Space - 
+- Time - O(1)
+- Space - O(n)
 
 **Dequeue()**
 - Time - 
 - Space - 
 
 **Peek()**
-- Time -
-- Space -
+- Time - O(1)
+- Space - O(1)
 
 ---
 
@@ -43,10 +43,13 @@ to be Dequeued from the shelter.
 
 ### White-board Visual
 
+![Whiteboard](../../assets/FIFOAnimalShelterWB.jpg)
+
 ---
 
 ### Change Log
 
+- 1.5 Add white board visual - 21 Jul 2020
 - 1.4 Add Peek() - 21 Jul 2020
 - 1.3 Add unit tests for Enqueue() and Dequeue() - 21 Jul 2020
 - 1.2 Add Dequeue() - 21 Jul 2020
