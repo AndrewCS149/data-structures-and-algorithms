@@ -40,7 +40,7 @@ namespace QueuesWithStacksTests
             string returnedValue = myStack.Dequeue();
 
             // assert
-            Assert.Equal("Bear", returnedValue);
+            Assert.Equal("Dog", returnedValue);
         }
 
         // Test Dequeue
