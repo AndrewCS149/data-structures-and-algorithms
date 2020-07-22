@@ -56,19 +56,7 @@ namespace QueuesWithStacks
             if (MyStack.Top == null)
                 throw new NullReferenceException("Stack is empty");
 
-            Stack tempStack = new Stack();
-
-            // reverse the stack and store in tempStack
-            while(MyStack.Top != null)
-                tempStack.Push(MyStack.Pop());
-
-            string returnVal = tempStack.Pop();
-
-            // re-reverse stack back to original state with added value
-            while (tempStack.Top != null)
-                MyStack.Push(tempStack.Pop());
-
-            return returnVal;
+            return MyStack.Pop();
         }
 
     }

@@ -26,9 +26,9 @@ approach.
 
 **Dequeue()**
 
-Time - O(n)
+Time - O(1)
 
-Space - O(n)
+Space - O(1)
 
 Dequeues a value from the PseudoQueue with a FIFO approach.
 
@@ -65,6 +65,7 @@ Dequeues a value from the PseudoQueue with a FIFO approach.
 
 ### Change Log
 
+- 1.5 Fix Dequeue() bug returning wrong value - 21 July 2020
 - 1.4 Library Complete - 20 July 2020
 - 1.3 Unit test of Dequeue() - 20 July 2020
 - 1.2 Dequeue() - 20 July 2020
