@@ -29,3 +29,4 @@ Code Challenge 13
 
 ### Change Log
 
+1.0 Add whiteboard visual to readme - 22 Jul 2020
