@@ -6,6 +6,7 @@
 * [zipped lists](code-challenges/LLZip)
 * [queues with stacks](code-challenges/QueuesWithStacks)
 * [FIFO animal shelter](code-challenges/FIFOAnimalShelter)
+* [multi-bracket validation](code-challenges/MultiBracketValidation)
 
 ---
 #### Data Structures
