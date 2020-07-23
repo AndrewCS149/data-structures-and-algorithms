@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MultiBracketValidation
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -17,6 +17,7 @@ namespace MultiBracketValidation
             string str6 = "[({}]";
             string str7 = "(](";
             string str8 = "[(])";
+            string str9 = "";
 
             Console.WriteLine(MultiBracketVal(str1));
             Console.WriteLine(MultiBracketVal(str2));
@@ -26,6 +27,7 @@ namespace MultiBracketValidation
             Console.WriteLine(MultiBracketVal(str6));
             Console.WriteLine(MultiBracketVal(str7));
             Console.WriteLine(MultiBracketVal(str8));
+            Console.WriteLine(MultiBracketVal(str9));
         }
 
         /// <summary>
@@ -41,7 +43,7 @@ namespace MultiBracketValidation
 
             // open / close state of bracket
             int state = 0;
-            int idx = 0;
+            int idx = -1; // detects if there are no brackets at all
             foreach (char ch in input)
             {
                 // if char is a closing bracket
@@ -70,7 +72,7 @@ namespace MultiBracketValidation
                     state++;
                 }
             }
-            return state == 0;
+            return state == 0 && idx != -1;
         }
     }
 }
