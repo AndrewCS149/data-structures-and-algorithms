@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Trees
 {
-    class Node<T>
+    public class Node<T>
     {
         public Node<T> LeftChild { get; set; }
         public Node<T> RightChild { get; set; }

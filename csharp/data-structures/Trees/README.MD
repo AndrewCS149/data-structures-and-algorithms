@@ -11,7 +11,7 @@ Code-Challenge 15
 
 ### Method Descriptions
 
-**Stack Class**
+**BinaryTree Class**
 
 - Push() - pushes a value to the top of the stack
   - Time - O(1)
