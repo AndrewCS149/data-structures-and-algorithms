@@ -83,5 +83,77 @@ namespace TreesTests
             // assert
             Assert.Equal(order, preOrder);
         }
+
+        [Fact]
+        public void CanReturnInOrderTraversal()
+        {
+            // arrange
+            BinaryTree<int> tree = new BinaryTree<int>();
+
+            Node<int> root = new Node<int>(10);
+            Node<int> five = new Node<int>(5);
+            Node<int> three = new Node<int>(3);
+            Node<int> seven = new Node<int>(7);
+            Node<int> twelve = new Node<int>(12);
+            Node<int> fifteen = new Node<int>(15);
+            Node<int> eighteen= new Node<int>(18);
+
+            tree.Root = root;
+            root.LeftChild = five;
+            root.RightChild = fifteen;
+
+            five.LeftChild = three;
+            five.RightChild = seven;
+
+            fifteen.LeftChild = twelve;
+            fifteen.RightChild = eighteen;
+
+            List<int> order = new List<int>()
+            {
+                3, 5, 7, 10, 12, 15, 18
+            };
+
+            // act
+            List<int> inOrder = tree.InOrder(tree.Root);
+
+            // assert
+            Assert.Equal(order, inOrder);
+        }
+
+        [Fact]
+        public void CanReturnPostOrderTraversal()
+        {
+            // arrange
+            BinaryTree<int> tree = new BinaryTree<int>();
+
+            Node<int> root = new Node<int>(10);
+            Node<int> five = new Node<int>(5);
+            Node<int> three = new Node<int>(3);
+            Node<int> seven = new Node<int>(7);
+            Node<int> twelve = new Node<int>(12);
+            Node<int> fifteen = new Node<int>(15);
+            Node<int> eighteen = new Node<int>(18);
+
+            tree.Root = root;
+            root.LeftChild = five;
+            root.RightChild = fifteen;
+
+            five.LeftChild = three;
+            five.RightChild = seven;
+
+            fifteen.LeftChild = twelve;
+            fifteen.RightChild = eighteen;
+
+            List<int> order = new List<int>()
+            {
+                3, 7, 5, 12, 18, 15, 10
+            };
+
+            // act
+            List<int> postOrder = tree.PostOrder(tree.Root);
+
+            // assert
+            Assert.Equal(order, postOrder);
+        }
     }
 }

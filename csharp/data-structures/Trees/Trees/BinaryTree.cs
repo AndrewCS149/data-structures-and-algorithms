@@ -54,5 +54,61 @@ namespace Trees
             if (root.RightChild != null)
                 PreOrder(traversal, root.RightChild);
         }
+
+        /// <summary>
+        /// InOrder traversal for a binary tree
+        /// </summary>
+        /// <param name="root">The root note of the binary tree</param>
+        /// <returns>The traversal order in a list</returns>
+        public List<T> InOrder(Node<T> root)
+        {
+            List<T> traversal = new List<T>();
+            InOrder(traversal, root);
+            return traversal;
+        }
+
+        /// <summary>
+        /// Recursive method for the InOrder traversal method
+        /// </summary>
+        /// <param name="traversal">The created list of the output</param>
+        /// <param name="root">The current root node being evaluated</param>
+        private void InOrder(List<T> traversal, Node<T> root)
+        {
+            if (root.LeftChild != null)
+                InOrder(traversal, root.LeftChild);
+
+            traversal.Add(root.Value);
+
+            if (root.RightChild != null)
+                InOrder(traversal, root.RightChild);
+        }
+
+        /// <summary>
+        /// PostOrder traversal for a binary tree
+        /// </summary>
+        /// <param name="root">The root note of the binary tree</param>
+        /// <returns>The traversal order in a list</returns>
+        public List<T> PostOrder(Node<T> root)
+        {
+            List<T> traversal = new List<T>();
+            PostOrder(traversal, root);
+            return traversal;
+        }
+
+        /// <summary>
+        /// Recursive method for the PostOrder traversal method
+        /// </summary>
+        /// <param name="traversal">The created list of the output</param>
+        /// <param name="root">The current root node being evaluated</param>
+        private void PostOrder(List<T> traversal, Node<T> root)
+        {
+            if (root.LeftChild != null)
+                PostOrder(traversal, root.LeftChild);
+
+            if (root.RightChild != null)
+                PostOrder(traversal, root.RightChild);
+
+            traversal.Add(root.Value);
+        }
     }
 }
