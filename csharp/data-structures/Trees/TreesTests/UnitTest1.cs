@@ -8,7 +8,7 @@ namespace TreesTests
     public class UnitTest1
     {
         [Fact]
-        public void CanInstantiateEmptyTree()
+        public void CanInstantiateEmptyBinaryTree()
         {
             // arrange & act
             BinaryTree<int> tree = new BinaryTree<int>();
@@ -18,7 +18,7 @@ namespace TreesTests
         }
 
         [Fact]
-        public void CanInstantiateTreeWithSingleRoot()
+        public void CanInstantiateBinaryTreeWithSingleRoot()
         {
             // arrange & act
             BinaryTree<int> tree = new BinaryTree<int>(50);
@@ -154,6 +154,54 @@ namespace TreesTests
 
             // assert
             Assert.Equal(order, postOrder);
+        }
+
+        [Fact]
+        public void CanInstantiateEmptyBinarySearchTree()
+        {
+            // arrange & act
+            BinarySearchTree tree = new BinarySearchTree();
+
+            // assert
+            Assert.Null(tree.Root);
+        }
+
+        [Fact]
+        public void CanInstantiateBinarySearchTreeWithSingleRoot()
+        {
+            // arrange & act
+            BinarySearchTree tree = new BinarySearchTree(50);
+
+            // assert
+            Assert.NotNull(tree.Root);
+            Assert.Equal(50, tree.Root.Value);
+            Assert.IsType<Node<int>>(tree.Root);
+        }
+
+        [Fact]
+        public void CanInsertIntoBinarySearchTree()
+        {
+            // arrange 
+            BinarySearchTree tree = new BinarySearchTree();
+
+            tree.Insert(10);
+            tree.Insert(5);
+            tree.Insert(15);
+            tree.Insert(3);
+            tree.Insert(7);
+            tree.Insert(12);
+            tree.Insert(16);
+
+            List<int> order = new List<int>()
+            {
+                10, 5, 3, 7, 15, 12, 16
+            };
+
+            // act
+            List<int> preOrder = tree.PreOrder(tree.Root);
+
+            // assert
+            Assert.Equal(order, preOrder);
         }
     }
 }
