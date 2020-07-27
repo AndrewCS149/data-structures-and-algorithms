@@ -48,6 +48,7 @@ namespace TreesTests
             Assert.Equal('c', tree.Root.RightChild.Value);
         }
 
+        // test PreOrder()
         [Fact]
         public void CanReturnPreOrderTraversal()
         {
@@ -84,6 +85,7 @@ namespace TreesTests
             Assert.Equal(order, preOrder);
         }
 
+        // test InOrder()
         [Fact]
         public void CanReturnInOrderTraversal()
         {
@@ -120,6 +122,7 @@ namespace TreesTests
             Assert.Equal(order, inOrder);
         }
 
+        // test PostOrder()
         [Fact]
         public void CanReturnPostOrderTraversal()
         {
@@ -178,6 +181,7 @@ namespace TreesTests
             Assert.IsType<Node<int>>(tree.Root);
         }
 
+        // test Add()
         [Fact]
         public void CanInsertIntoBinarySearchTree()
         {
@@ -223,6 +227,27 @@ namespace TreesTests
             // act & assert
             Assert.False(tree.Contains(22));
             Assert.True(tree.Contains(15));
+        }
+
+        // test contains()
+        [Fact]
+        public void CanAddLeftAndRightToBinarySearchTree()
+        {
+            // arrange 
+            BinarySearchTree tree = new BinarySearchTree(10);
+
+            // act
+            Node<int> leftChild = new Node<int>(5);
+            Node<int> rightChild = new Node<int>(15);
+
+            tree.Root.LeftChild = leftChild;
+            tree.Root.RightChild = rightChild;
+
+            // assert
+            Assert.NotNull(tree.Root.LeftChild);
+            Assert.NotNull(tree.Root.RightChild);
+            Assert.Equal(5, tree.Root.LeftChild.Value);
+            Assert.Equal(15, tree.Root.RightChild.Value);
         }
     }
 }
