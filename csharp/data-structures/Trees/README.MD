@@ -53,13 +53,84 @@ contains the 'insert' and 'contains' methods.
 **BinaryTree Class**
 
 - PreOrder()
+  - Create new list
+  - Call overloaded PreOrder method which will:
+    - take in the list and root as parameters
+    - add the root value to the list
+    - check if roots left child is not null
+      - call PreOrder with the list and the roots left child as arguments
+    - check if roots right child is not null
+      - call PreOrder with the list and the roots right child as arguments
+  - Return the list
+  
 - InOrder()
+  - Create new list
+  - Call overloaded InOrder method which will:
+    - take in the list and root as parameters
+    - check if roots left child is not null
+      - call InOrder with the list and the roots left child as arguments
+    - add the root value to the list
+    - check if roots right child is not null
+      - call InOrder with the list and the roots right child as arguments
+  - Return the list
+  
 - PostOrder()
+  - Create new list
+  - Call overloaded PostOrder method which will:
+    - take in the list and root as parameters
+    - check if roots left child is not null
+      - call PostOrder with the list and the roots left child as arguments
+    - check if roots right child is not null
+      - call PostOrder with the list and the roots right child as arguments
+    - add the root value to the list
+  - Return the list
+
+---
 
 **BinarySearchTree Class**
 
-- Insert()
+- Add()
+  - Create new node with the passed in value
+  - if the root is null
+    - assign root the new node
+  - otherwise
+    - call overloaded Add() method which takes the new node and the root in as 
+      arguments.
+      - If the new node's value is less than the root's value
+        - if the roots left child is null
+          - assign the new node to the root's left child
+        - otherwise
+          - re-assign the root the root's left child
+          - call Add() with the new node and the root as arguments
+      - If the new node's value is greater than the root's value
+        - if the root's right child is null
+          - assign the new node to the root's right child
+        - otherwise
+          - re-assign the root the root's right child
+          - call Add() with the new node and the root as arguments
+
 - Contains()
+  - Initialize a bool names 'contains'
+  - if the root is null
+    - return false
+  - if the root is not null
+    - re-assign contains to the output of the overloaded method call Contains() which 
+      takes in the passed in value and the root as arguments
+      - Initialize another 'contains' variable to false
+      - if the passed in value is equal the root's value
+        - return true
+      - if it is less than the root's value
+        - if the root's left child is not null
+          - re-assign root to the root's left child
+          - re-assign contains to the output of the recursive call to Contains() with the 
+            value and the new root as arguments
+     - if it is greater than the root's value
+       - if the root's right child is not null
+         - re-assign root to the root's right child
+         - re-assign contains to the output of the recursive call to Contains() with the 
+           value and the new root as arguments
+    - return contains
+  - return contains
 
 ---
 
