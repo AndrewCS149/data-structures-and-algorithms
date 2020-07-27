@@ -12,3 +12,4 @@
 #### Data Structures
 * [linked list](data-structures/LinkedList)
 * [stacks & queues](data-structures/StacksAndQueues)
+* [trees](data-structures/Trees)
