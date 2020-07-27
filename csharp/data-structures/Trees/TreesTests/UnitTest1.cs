@@ -184,17 +184,18 @@ namespace TreesTests
             // arrange 
             BinarySearchTree tree = new BinarySearchTree();
 
-            tree.Insert(10);
-            tree.Insert(5);
-            tree.Insert(15);
-            tree.Insert(3);
-            tree.Insert(7);
-            tree.Insert(12);
-            tree.Insert(16);
+            tree.Add(10);
+            tree.Add(5);
+            tree.Add(15);
+            tree.Add(3);
+            tree.Add(7);
+            tree.Add(12);
+            tree.Add(16);
+            tree.Add(13);
 
             List<int> order = new List<int>()
             {
-                10, 5, 3, 7, 15, 12, 16
+                10, 5, 3, 7, 15, 12, 13, 16
             };
 
             // act
@@ -202,6 +203,26 @@ namespace TreesTests
 
             // assert
             Assert.Equal(order, preOrder);
+        }
+
+        // test Contains()
+        [Fact]
+        public void CanReturnTrueOrFalseContains()
+        {
+            // arrange 
+            BinarySearchTree tree = new BinarySearchTree();
+
+            tree.Add(10);
+            tree.Add(5);
+            tree.Add(15);
+            tree.Add(3);
+            tree.Add(7);
+            tree.Add(12);
+            tree.Add(16);
+
+            // act & assert
+            Assert.False(tree.Contains(22));
+            Assert.True(tree.Contains(15));
         }
     }
 }

@@ -40,6 +40,12 @@ contains the 'insert' and 'contains' methods.
   - Inserts a value into the binary search tree based on the inserted value.
   - Time - O(h)
   - Space - O(1)
+- Contains()
+  - Returns true if the passed in value is found in the binary search tree.
+    Returns false if passed in value is not found.
+  - Time - O(h)
+  - Space - O(1)
+  - 
 ---
 
 ### Method Approaches
@@ -53,11 +59,14 @@ contains the 'insert' and 'contains' methods.
 **BinarySearchTree Class**
 
 - Insert()
-- 
+- Contains()
+
 ---
 
 ### Change Log
 
+- 1.9 Unit test for Contains() - 26 Jul 2020
+- 1.8 Contains() for BinarySearchTree - 26 Jul 2020
 - 1.7 Unit tests for Insert() - 26 Jul 2020
 - 1.6 Insert() for BinarySearchTree class- 26 Jul 2020
 - 1.5 Unit tests for PostOrder() - 26 Jul 2020
