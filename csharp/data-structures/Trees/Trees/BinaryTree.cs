@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Runtime;
 using System.Text;
 
@@ -109,6 +110,20 @@ namespace Trees
                 PostOrder(traversal, root.RightChild);
 
             traversal.Add(root.Value);
+        }
+
+        /// <summary>
+        /// Returns the largest value in a integer Binary Tree
+        /// </summary>
+        /// <param name="root">The root node</param>
+        /// <returns>The largest value</returns>
+        public T FindMaxValue(Node<T> root)
+        {
+            if (root.Value.GetType() != typeof(int))
+                throw new Exception("Cannot find max value of non integer types");
+
+            List<T> orderedList = InOrder(root);
+            return orderedList[orderedList.Count - 1];
         }
     }
 }

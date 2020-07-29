@@ -98,7 +98,7 @@ namespace TreesTests
             Node<int> seven = new Node<int>(7);
             Node<int> twelve = new Node<int>(12);
             Node<int> fifteen = new Node<int>(15);
-            Node<int> eighteen= new Node<int>(18);
+            Node<int> eighteen = new Node<int>(18);
 
             tree.Root = root;
             root.LeftChild = five;
@@ -248,6 +248,38 @@ namespace TreesTests
             Assert.NotNull(tree.Root.RightChild);
             Assert.Equal(5, tree.Root.LeftChild.Value);
             Assert.Equal(15, tree.Root.RightChild.Value);
+        }
+
+        // test FindMAxValue()
+        [Fact]
+        public void CanReturnMaxValueInTree()
+        {
+            // arrange
+            BinaryTree<int> tree = new BinaryTree<int>();
+
+            Node<int> root = new Node<int>(10);
+            Node<int> five = new Node<int>(5);
+            Node<int> three = new Node<int>(3);
+            Node<int> seven = new Node<int>(7);
+            Node<int> twelve = new Node<int>(12);
+            Node<int> fifteen = new Node<int>(15);
+            Node<int> eighteen = new Node<int>(18);
+
+            tree.Root = root;
+            root.LeftChild = five;
+            root.RightChild = fifteen;
+
+            five.LeftChild = three;
+            five.RightChild = seven;
+
+            fifteen.LeftChild = twelve;
+            fifteen.RightChild = eighteen;
+
+            // act
+            int maxValue = tree.FindMaxValue(root);
+
+            // assert
+            Assert.Equal(18, maxValue);
         }
     }
 }
