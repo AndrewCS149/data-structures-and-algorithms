@@ -79,9 +79,12 @@ Array is sorted. No change needed.
 
 ---
 
-### Efficency
+### Efficiency
 
----
+Time - O(n^2)
+
+Space - O(n)
+
 
 
 
