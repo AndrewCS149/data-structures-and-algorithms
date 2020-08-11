@@ -19,5 +19,19 @@ namespace InerstionSortTests
             // assert
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void CanSortReversedArray()
+        {
+            // arrange
+            int[] testArr = new int[] { 20, 18, 12, 8, 5, -2 };
+
+            // act
+            int[] result = InsertionSortMethod(testArr);
+            int[] expected = new int[] { -2, 5, 8, 12, 18, 20 };
+
+            // assert
+            Assert.Equal(expected, result);
+        }
     }
 }
