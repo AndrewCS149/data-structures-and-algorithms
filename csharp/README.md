@@ -7,6 +7,7 @@
 * [queues with stacks](code-challenges/QueuesWithStacks)
 * [FIFO animal shelter](code-challenges/FIFOAnimalShelter)
 * [multi-bracket validation](code-challenges/MultiBracketValidation)
+* [insertion sort](code-challenges/InsertionSort)
 
 ---
 #### Data Structures
