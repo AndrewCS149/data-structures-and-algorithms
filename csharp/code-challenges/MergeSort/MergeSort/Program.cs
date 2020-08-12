@@ -17,7 +17,7 @@ namespace MergeSort
             PrintArray(arr);
         }
 
-        private static int[] MergeSortIt(int[] arr)
+        public static int[] MergeSortIt(int[] arr)
         {
             // base case
             if (arr.Length <= 1)
