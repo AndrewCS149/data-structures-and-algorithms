@@ -8,6 +8,7 @@
 * [FIFO animal shelter](code-challenges/FIFOAnimalShelter)
 * [multi-bracket validation](code-challenges/MultiBracketValidation)
 * [insertion sort](code-challenges/InsertionSort)
+* [merge sort](code-challenges/MergeSort)
 
 ---
 #### Data Structures
