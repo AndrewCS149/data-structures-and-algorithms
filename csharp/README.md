@@ -9,6 +9,7 @@
 * [multi-bracket validation](code-challenges/MultiBracketValidation)
 * [insertion sort](code-challenges/InsertionSort)
 * [merge sort](code-challenges/MergeSort)
+* [quick sort](code-challenges/QuickSortAlgo)
 
 ---
 #### Data Structures
