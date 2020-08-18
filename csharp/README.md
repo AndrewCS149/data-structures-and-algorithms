@@ -10,6 +10,7 @@
 * [insertion sort](code-challenges/InsertionSort)
 * [merge sort](code-challenges/MergeSort)
 * [quick sort](code-challenges/QuickSortAlgo)
+* [repeated words](code-challenges/RepeatedWords)
 
 ---
 #### Data Structures
