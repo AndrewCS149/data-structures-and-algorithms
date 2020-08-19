@@ -11,6 +11,7 @@
 * [merge sort](code-challenges/MergeSort)
 * [quick sort](code-challenges/QuickSortAlgo)
 * [repeated words](code-challenges/RepeatedWords)
+* [tree intersection](code-challenges/TreeIntersection)
 
 ---
 #### Data Structures
