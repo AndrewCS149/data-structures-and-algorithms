@@ -19,3 +19,4 @@
 * [stacks & queues](data-structures/StacksAndQueues)
 * [trees](data-structures/Trees)
 * [hashtables](data-structures/Hashtable)
+* [left join hashtables](data-structures/LeftJoin)
